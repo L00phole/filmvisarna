@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     background-color: black;
 }
@@ -29,3 +30,14 @@ main{
 #showInfo{
     align-items: center;
 }
+=======
+#Finch{
+width: 296.5px;
+height: auto;
+}
+
+.book-seats{
+  position: absolute;
+  right:20px;
+}
+>>>>>>> 0e1882c139e778309b8cc134959ca95aa3f3dbba

@@ -1,49 +1,277 @@
 [
   {
     "id": 1,
-    "title": "Call me by your name",
+    "title": "Matrix Resurrections",
     "productionCountries": [
-      "Italien",
       "USA"
     ],
-    "productionYear": 2017,
-    "length": 132,
-    "genre": "Drama",
-    "distributor": "UIP",
+    "productionYear": 2021,
+    "length": 140,
+    "genre": ["Action", "Sci-fi", "Aventyr"],
+    "distributor": "Warner Bros",
     "language": "engelska",
     "subtitles": "svenska",
-    "director": "Luca Guadagnino",
+    "director": "Lana Wachowski",
     "actors": [
-      "Armie Hammer",
-      "Timothée Chalamet",
-      "Michael Stuhlbarg"
+      "Keanu Reeves", 
+      "Carrie-Anne Moss", "Yahya Abdul-Mateen II",
+       "Jessica Henwick", "Jonathan Groff", 
+       "Neil Patrick Harris", "Jada Pinkett Smith"
     ],
-    "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
+    "shortDescription":"<p>Fjärde filmen i The Matrix-franchisen.</p>",
+    "description": "<p>Tjugo år efter händelserna i The Matrix Revolutions lever Neo ett till synes vanligt liv som Thomas A. Anderson i San Francisco där hans terapeut skriver ut blåa piller till honom.</p><p>Varken han eller Trinity känner igen varandra. Men Morpheus erbjuder honom det röda pillret och öppnar hans sinne för Matrix-världen igen.</p>",
     "images": [
-      "call-me-poster1.jpg",
-      "call-me-poster2.jpg"
+      "matrix_poster_1.jpg",
+      "matrix_poster_2.jpg"
     ],
     "youtubeTrailers": [
-      "Z9AYPxH5NTM"
+      "https://www.youtube.com/embed/9ix7TUGVYIo"
     ],
     "reviews": [
       {
-        "source": "Sydsvenskan",
-        "quote": "ett drama berättat med stor ömhet",
-        "stars": 4,
-        "max": 5
+        "source": "",
+        "quote": "",
+        "stars": 0,
+        "max": 5,
+        "sourceLink": ""
       },
       {
-        "source": "Svenska Dagbladet",
-        "quote": "en film att förälska sig i",
+        "source": "",
+        "quote": "",
+        "stars": 0,
+        "max": 5,
+        "sourceLink": ""
+      },
+      {
+        "source": "",
+        "quote": "",
+        "stars": 4,
+        "max": 5,
+        "sourceLink":""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Eternals",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2021,
+    "length": 156,
+    "genre": [
+      "Action",
+      "Äventyr",
+      "Drama"
+    ],
+    "distributor": "Walt Disney Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Chloe Zhao",
+    "actors": [
+      "Angelina Jolie",
+      "Richard Madden",
+      "Salma Hayek",
+      "Gemma Chan",
+      "Kumail Nanjiani"
+    ],
+    "shortDescription": "<p>Marvels senaste mästerverk i MCU.</p>",
+    "description": "<p>Eternals är en grupp superhjältar som har skyddat Jorden sedan tidernas begynnelse.</p><p>När monstruösa fiender, sedan länge bortglömda, plötsligt återvänder tvingas Eternals återförenas för att ännu en gång försvara mänskligheten.</p>",
+    "images": [
+      "eternals_poster_1.jpg",
+      "eternals_poster_2.jpg"
+    ],
+    "youtubeTrailers": [
+      "https://youtu.be/x_me3xsvDgk"
+    ],
+    "reviews": [
+      {
+        "source": "Observer",
+        "quote": "'Eternals' gives the MCU exactly what it has been missing.",
+        "stars": 4,
+        "max": 5,
+        "sourceLink": "https://observer.com/2021/10/marvel-eternals-review-chloe-zhao-angelina-jolie-richard-madden-gemma-chan/"
+      },
+      {
+        "source": "Entertainment",
+        "quote": "There's less super, more story in Chloé Zhao's melancholy Marvel chapter",
+        "stars": 4,
+        "max": 5,
+        "sourceLink": "https://ew.com/movies/movie-reviews/eternals-marvel-movie-review/"
+      },
+      {
+        "source": "IGN",
+        "quote": "Eternals is sprawling — across scenery, across centuries, you name it.",
+        "stars": 4,
+        "max": 5,
+        "sourceLink": "https://nordic.ign.com/marvels-eternals/50794/review/eternals-review"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dune",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2021,
+    "length": 155,
+    "genre": [
+      "Äventyr",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "distributor": "SF/Warner Bros",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Denis Villeneuve",
+    "actors": [
+      "Rebecca Ferguson",
+      "Zendaya",
+      "Oscar Isaac",
+      "Timothee Chalamet",
+      "Jason Momoa",
+      "Josh Brolin"
+    ],
+    "shortDescription": "<p>Nytolkning av Frank Herberts gamla sci-fi klassiker är berörande och skrämmande.</p>",
+    "description": "<p>Paul Atreides, en briljant och talangfull ung man född med ett storslaget öde, måste resa till den farligaste planeten i universum för att säkra sin familjs och sitt folks framtid.</p><p>När illasinnade krafter kastas in i en konflikt över tillgången på planetens mest värdefulla råvara – ett ämne med förmåga att låsa upp mänsklighetens fulla potential – kommer bara de som övervinner sina rädslor att överleva.</p>",
+    "images": [
+      "dune_poster_1.jpg",
+      "dune_poster_2.jpg"
+    ],
+    "youtubeTrailers": [
+      "https://youtu.be/w0HgHet0sxg"
+    ],
+    "reviews": [
+      {
+        "source": "Uproxx",
+        "quote": "Denis Villeneuve’s ‘Dune’ Can Convert Any Sandworm Virgin",
         "stars": 5,
-        "max": 5
+        "max": 5,
+        "sourceLink": "https://uproxx.com/movies/dune-review-timothe-chalame-et-jason-momoa-oscar-issac-rebecca-ferguson-denis-villeneuve/"
       },
       {
-        "source": "DN",
-        "quote": "en het romans i åttiotalskostym",
+        "source": "ScreenCrush",
+        "quote": "A Spicy Journey To An Amazing future!",
+        "stars": 5,
+        "max": 5,
+        "sourceLink": "https://screencrush.com/dune-2021-review/"
+      },
+      {
+        "source": "The Globe and mail",
+        "quote": "Star Wars meets Lawrence of Arabia.",
+        "stars": 3.5,
+        "max": 5,
+        "sourceLink": "https://www.theglobeandmail.com/arts/film/tiff/article-tiff-2021-read-our-reviews-of-films-playing-at-the-festival/"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Red Notice",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2021,
+    "length": 118,
+    "genre": [
+      "Action",
+      "Komedi"
+    ],
+    "distributor": "Netflix",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Rawson Marshall Thurber",
+    "actors": [
+      "Gal Gadot",
+      "Ryan Reynolds",
+      "Dwayne Johnson"
+    ],
+    "shortDescription": "<p>En Interpol-agent spårar världens mest eftersökta konsttjuv.</p>",
+    "description": "<p>Specialagent John Hartley, en kriminell profiler för FBI, får i uppdrag att hjälpa Interpol Agenten Urvashi Das att utreda stölden av ett av äggen som hålls utställd på Museo Nazionale di Castel Sant'Angelo i Rom.</p><p>Han fastställer att ägget som visas är en förfalskning och att det riktiga ägget har blivit stulet, så Das har låst rummet. Men innan rummet stängs, lyckas den internationella konsttjuven Nolan Booth fly, förföljd av Hartley.</p>",
+    "images": [
+      "red_notice_poster_1.jpg",
+      "red_notice_poster_2.jpg"
+    ],
+    "youtubeTrailers": [
+      "https://youtu.be/Pj0wz7zu3Ms"
+    ],
+    "reviews": [
+      {
+        "source": "Film Threat",
+        "quote": "The action is uncanny, the comedy absurd, and every second is incredibly fun.",
         "stars": 4,
-        "max": 5
+        "max": 5,
+        "sourceLink": "https://filmthreat.com/reviews/red-notice/"
+      },
+      {
+        "source": "Total Film",
+        "quote": "Johnson, Reynolds & Gadot deliver a flimsy but playful frolic.",
+        "stars": 3,
+        "max": 5,
+        "sourceLink": "https://www.gamesradar.com/red-notice-review-netflix/"
+      },
+      {
+        "source": "Entertainment",
+        "quote": "A starry action comedy too slapstick-silly to take seriously.",
+        "stars": 3,
+        "max": 5,
+        "sourceLink": "https://ew.com/movies/movie-reviews/red-notice-review/"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Finch",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2021,
+    "length": 115,
+    "genre": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "distributor": "Apple",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Miguel Sapochnik",
+    "actors": [
+      "Tom Hanks",
+      "Caleb Landry Jones",
+      "Lora Martinez-Cunningham",
+      "Oscar Avila"
+    ],
+    "shortDescription": "<p>En berättelse om livet, kärleken, vänskap och vad det betyder att vara människa.</p>",
+    "description": "<p>Finch (Tom Hanks) är en man som ger sig ut på en rörande och kraftfull resa för att hitta ett nytt hem för sin osannolika familj – hans älskade hund och en nyskapad robot– i en farlig och härjad värld.</p><p></p>",
+    "images": [
+      "finch_poster_1.jpg",
+      "finch_poster_2.jpg"
+    ],
+    "youtubeTrailers": [
+      "https://youtu.be/-0bYWnP3jH4"
+    ],
+    "reviews": [
+      {
+        "source": "Uproxx",
+        "quote": "‘Finch’ Is Innovative And Delightful, Like A Live-Action Pixar Movie Starring Tom Hanks And A Dog",
+        "stars": 5,
+        "max": 5,
+        "sourceLink": "https://uproxx.com/movies/finch-movie-review-tom-hanks-dog-robot/"
+      },
+      {
+        "source": "The Globe and mail",
+        "quote": "Tom Hanks has an All-American Armageddon in comforting  drama Finch",
+        "stars": 4,
+        "max": 5,
+        "sourceLink": "https://www.theglobeandmail.com/arts/film/reviews/article-tom-hanks-has-an-all-american-armageddon-in-comforting-apple-tv-drama/"
+      },
+      {
+        "source": "c|net",
+        "quote": "Where's Wall-E? An impressive robot joins Hanks for a relatively gentle end-of-the-world",
+        "stars": 4,
+        "max": 5,
+        "sourceLink": "https://www.cnet.com/news/finch-review-this-time-tom-hanks-castaway-pal-is-a-winning-cg-robot/"
       }
     ]
   }
