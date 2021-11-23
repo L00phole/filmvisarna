@@ -3,4 +3,7 @@ width: 296.5px;
 height: auto;
 }
 
-
+.book-seats{
+  position: absolute;
+  right:20px;
+}
