@@ -1,7 +1,7 @@
 // A function that creates a schedule for shows, 3 shows in 2 auditoriums
 // will be scheduled for each day.
 // Param weeks: integer, the number of weeks to create a schedule for
-function createShowSchedule(weeks) {
+async function createShowSchedule(weeks) {
     // Number of days to make a schedule for
     let days = 7 * weeks;
 
@@ -83,6 +83,9 @@ function createShowSchedule(weeks) {
     // to the "shows.json" file and don't run this function when
     // the web site is launched.
     data['shows'] = shows;
+    // Save data['shows'] to shows.json
+    await JSON._save('shows.json', data['shows']);
+
     populateShowSchedule();
 }
 
@@ -134,7 +137,9 @@ $('#dateSelect').on('change', function () {
         showDiv.setAttribute('id', 'showDiv_' + show.id);
         showDiv.setAttribute('href', 'show-' + show.id);
         $('#showDiv_' + show.id).on("click", function () {
-            redirectToShowPage(show);
+            // Assigns the window location the current location and adds show.html with
+            // a show id parameter.
+            window.location.assign(`${window.location}show.html?id=${show.id}`);
         });
         // Adds mouseenter and mouseleave events with some styling functionality
         $('#showDiv_' + show.id).on("mouseenter", function () {
@@ -152,8 +157,4 @@ $('#dateSelect').on('change', function () {
 // Get the scheduled shows for the film with the given title
 function getShowsForFilm(filmTitle) {
     return data['shows'].filter(film => film.film === filmTitle);
-}
-
-function redirectToShowPage(show) {
-    selectedShow(show);
 }
