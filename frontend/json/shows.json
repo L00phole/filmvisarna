@@ -1,8 +1,1178 @@
 [
-    {
-        "auditorium": "Stora Salongen",
-        "film": "Call me by your name",
-        "date": "2018-01-22",
-        "time": "18.40"
-    }
+  {
+    "id": 1,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-22",
+    "time": "18:00"
+  },
+  {
+    "id": 2,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-22",
+    "time": "18:00"
+  },
+  {
+    "id": 3,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-22",
+    "time": "20:30"
+  },
+  {
+    "id": 4,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-22",
+    "time": "20:30"
+  },
+  {
+    "id": 5,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-22",
+    "time": "23:00"
+  },
+  {
+    "id": 6,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-22",
+    "time": "23:00"
+  },
+  {
+    "id": 7,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-23",
+    "time": "18:00"
+  },
+  {
+    "id": 8,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-23",
+    "time": "18:00"
+  },
+  {
+    "id": 9,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-23",
+    "time": "20:30"
+  },
+  {
+    "id": 10,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-23",
+    "time": "20:30"
+  },
+  {
+    "id": 11,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-23",
+    "time": "23:00"
+  },
+  {
+    "id": 12,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-23",
+    "time": "23:00"
+  },
+  {
+    "id": 13,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-24",
+    "time": "18:00"
+  },
+  {
+    "id": 14,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-24",
+    "time": "18:00"
+  },
+  {
+    "id": 15,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-24",
+    "time": "20:30"
+  },
+  {
+    "id": 16,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-24",
+    "time": "20:30"
+  },
+  {
+    "id": 17,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-24",
+    "time": "23:00"
+  },
+  {
+    "id": 18,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-24",
+    "time": "23:00"
+  },
+  {
+    "id": 19,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-25",
+    "time": "18:00"
+  },
+  {
+    "id": 20,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-25",
+    "time": "18:00"
+  },
+  {
+    "id": 21,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-25",
+    "time": "20:30"
+  },
+  {
+    "id": 22,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-25",
+    "time": "20:30"
+  },
+  {
+    "id": 23,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-25",
+    "time": "23:00"
+  },
+  {
+    "id": 24,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-25",
+    "time": "23:00"
+  },
+  {
+    "id": 25,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-26",
+    "time": "18:00"
+  },
+  {
+    "id": 26,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-26",
+    "time": "18:00"
+  },
+  {
+    "id": 27,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-26",
+    "time": "20:30"
+  },
+  {
+    "id": 28,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-26",
+    "time": "20:30"
+  },
+  {
+    "id": 29,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-26",
+    "time": "23:00"
+  },
+  {
+    "id": 30,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-26",
+    "time": "23:00"
+  },
+  {
+    "id": 31,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-27",
+    "time": "18:00"
+  },
+  {
+    "id": 32,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-27",
+    "time": "18:00"
+  },
+  {
+    "id": 33,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-27",
+    "time": "20:30"
+  },
+  {
+    "id": 34,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-27",
+    "time": "20:30"
+  },
+  {
+    "id": 35,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-27",
+    "time": "23:00"
+  },
+  {
+    "id": 36,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-27",
+    "time": "23:00"
+  },
+  {
+    "id": 37,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-28",
+    "time": "18:00"
+  },
+  {
+    "id": 38,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-28",
+    "time": "18:00"
+  },
+  {
+    "id": 39,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-28",
+    "time": "20:30"
+  },
+  {
+    "id": 40,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-28",
+    "time": "20:30"
+  },
+  {
+    "id": 41,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-28",
+    "time": "23:00"
+  },
+  {
+    "id": 42,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-28",
+    "time": "23:00"
+  },
+  {
+    "id": 43,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-29",
+    "time": "18:00"
+  },
+  {
+    "id": 44,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-29",
+    "time": "18:00"
+  },
+  {
+    "id": 45,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-29",
+    "time": "20:30"
+  },
+  {
+    "id": 46,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-29",
+    "time": "20:30"
+  },
+  {
+    "id": 47,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-29",
+    "time": "23:00"
+  },
+  {
+    "id": 48,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-29",
+    "time": "23:00"
+  },
+  {
+    "id": 49,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-30",
+    "time": "18:00"
+  },
+  {
+    "id": 50,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-30",
+    "time": "18:00"
+  },
+  {
+    "id": 51,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-30",
+    "time": "20:30"
+  },
+  {
+    "id": 52,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2021-11-30",
+    "time": "20:30"
+  },
+  {
+    "id": 53,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2021-11-30",
+    "time": "23:00"
+  },
+  {
+    "id": 54,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-30",
+    "time": "23:00"
+  },
+  {
+    "id": 55,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2021-11-31",
+    "time": "18:00"
+  },
+  {
+    "id": 56,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2021-11-31",
+    "time": "18:00"
+  },
+  {
+    "id": 57,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2021-11-31",
+    "time": "20:30"
+  },
+  {
+    "id": 58,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2021-11-31",
+    "time": "20:30"
+  },
+  {
+    "id": 59,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2021-11-31",
+    "time": "23:00"
+  },
+  {
+    "id": 60,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2021-11-31",
+    "time": "23:00"
+  },
+  {
+    "id": 61,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-1",
+    "time": "18:00"
+  },
+  {
+    "id": 62,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-1",
+    "time": "18:00"
+  },
+  {
+    "id": 63,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-1",
+    "time": "20:30"
+  },
+  {
+    "id": 64,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-1",
+    "time": "20:30"
+  },
+  {
+    "id": 65,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-1",
+    "time": "23:00"
+  },
+  {
+    "id": 66,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-1",
+    "time": "23:00"
+  },
+  {
+    "id": 67,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-2",
+    "time": "18:00"
+  },
+  {
+    "id": 68,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-2",
+    "time": "18:00"
+  },
+  {
+    "id": 69,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-2",
+    "time": "20:30"
+  },
+  {
+    "id": 70,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-2",
+    "time": "20:30"
+  },
+  {
+    "id": 71,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-2",
+    "time": "23:00"
+  },
+  {
+    "id": 72,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-2",
+    "time": "23:00"
+  },
+  {
+    "id": 73,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-3",
+    "time": "18:00"
+  },
+  {
+    "id": 74,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-3",
+    "time": "18:00"
+  },
+  {
+    "id": 75,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-3",
+    "time": "20:30"
+  },
+  {
+    "id": 76,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-3",
+    "time": "20:30"
+  },
+  {
+    "id": 77,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-3",
+    "time": "23:00"
+  },
+  {
+    "id": 78,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-3",
+    "time": "23:00"
+  },
+  {
+    "id": 79,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-4",
+    "time": "18:00"
+  },
+  {
+    "id": 80,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-4",
+    "time": "18:00"
+  },
+  {
+    "id": 81,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-4",
+    "time": "20:30"
+  },
+  {
+    "id": 82,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-4",
+    "time": "20:30"
+  },
+  {
+    "id": 83,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-4",
+    "time": "23:00"
+  },
+  {
+    "id": 84,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-4",
+    "time": "23:00"
+  },
+  {
+    "id": 85,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-5",
+    "time": "18:00"
+  },
+  {
+    "id": 86,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-5",
+    "time": "18:00"
+  },
+  {
+    "id": 87,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-5",
+    "time": "20:30"
+  },
+  {
+    "id": 88,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-5",
+    "time": "20:30"
+  },
+  {
+    "id": 89,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-5",
+    "time": "23:00"
+  },
+  {
+    "id": 90,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-5",
+    "time": "23:00"
+  },
+  {
+    "id": 91,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-6",
+    "time": "18:00"
+  },
+  {
+    "id": 92,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-6",
+    "time": "18:00"
+  },
+  {
+    "id": 93,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-6",
+    "time": "20:30"
+  },
+  {
+    "id": 94,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-6",
+    "time": "20:30"
+  },
+  {
+    "id": 95,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-6",
+    "time": "23:00"
+  },
+  {
+    "id": 96,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-6",
+    "time": "23:00"
+  },
+  {
+    "id": 97,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-7",
+    "time": "18:00"
+  },
+  {
+    "id": 98,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-7",
+    "time": "18:00"
+  },
+  {
+    "id": 99,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-7",
+    "time": "20:30"
+  },
+  {
+    "id": 100,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-7",
+    "time": "20:30"
+  },
+  {
+    "id": 101,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-7",
+    "time": "23:00"
+  },
+  {
+    "id": 102,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-7",
+    "time": "23:00"
+  },
+  {
+    "id": 103,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-8",
+    "time": "18:00"
+  },
+  {
+    "id": 104,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-8",
+    "time": "18:00"
+  },
+  {
+    "id": 105,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-8",
+    "time": "20:30"
+  },
+  {
+    "id": 106,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-8",
+    "time": "20:30"
+  },
+  {
+    "id": 107,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-8",
+    "time": "23:00"
+  },
+  {
+    "id": 108,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-8",
+    "time": "23:00"
+  },
+  {
+    "id": 109,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-9",
+    "time": "18:00"
+  },
+  {
+    "id": 110,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-9",
+    "time": "18:00"
+  },
+  {
+    "id": 111,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-9",
+    "time": "20:30"
+  },
+  {
+    "id": 112,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-9",
+    "time": "20:30"
+  },
+  {
+    "id": 113,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-9",
+    "time": "23:00"
+  },
+  {
+    "id": 114,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-9",
+    "time": "23:00"
+  },
+  {
+    "id": 115,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-10",
+    "time": "18:00"
+  },
+  {
+    "id": 116,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-10",
+    "time": "18:00"
+  },
+  {
+    "id": 117,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-10",
+    "time": "20:30"
+  },
+  {
+    "id": 118,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-10",
+    "time": "20:30"
+  },
+  {
+    "id": 119,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-10",
+    "time": "23:00"
+  },
+  {
+    "id": 120,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-10",
+    "time": "23:00"
+  },
+  {
+    "id": 121,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-11",
+    "time": "18:00"
+  },
+  {
+    "id": 122,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-11",
+    "time": "18:00"
+  },
+  {
+    "id": 123,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-11",
+    "time": "20:30"
+  },
+  {
+    "id": 124,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-11",
+    "time": "20:30"
+  },
+  {
+    "id": 125,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-11",
+    "time": "23:00"
+  },
+  {
+    "id": 126,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-11",
+    "time": "23:00"
+  },
+  {
+    "id": 127,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-12",
+    "time": "18:00"
+  },
+  {
+    "id": 128,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-12",
+    "time": "18:00"
+  },
+  {
+    "id": 129,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-12",
+    "time": "20:30"
+  },
+  {
+    "id": 130,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-12",
+    "time": "20:30"
+  },
+  {
+    "id": 131,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-12",
+    "time": "23:00"
+  },
+  {
+    "id": 132,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-12",
+    "time": "23:00"
+  },
+  {
+    "id": 133,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-13",
+    "time": "18:00"
+  },
+  {
+    "id": 134,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-13",
+    "time": "18:00"
+  },
+  {
+    "id": 135,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-13",
+    "time": "20:30"
+  },
+  {
+    "id": 136,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-13",
+    "time": "20:30"
+  },
+  {
+    "id": 137,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-13",
+    "time": "23:00"
+  },
+  {
+    "id": 138,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-13",
+    "time": "23:00"
+  },
+  {
+    "id": 139,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-14",
+    "time": "18:00"
+  },
+  {
+    "id": 140,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-14",
+    "time": "18:00"
+  },
+  {
+    "id": 141,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-14",
+    "time": "20:30"
+  },
+  {
+    "id": 142,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-14",
+    "time": "20:30"
+  },
+  {
+    "id": 143,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-14",
+    "time": "23:00"
+  },
+  {
+    "id": 144,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-14",
+    "time": "23:00"
+  },
+  {
+    "id": 145,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-15",
+    "time": "18:00"
+  },
+  {
+    "id": 146,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-15",
+    "time": "18:00"
+  },
+  {
+    "id": 147,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-15",
+    "time": "20:30"
+  },
+  {
+    "id": 148,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-15",
+    "time": "20:30"
+  },
+  {
+    "id": 149,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-15",
+    "time": "23:00"
+  },
+  {
+    "id": 150,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-15",
+    "time": "23:00"
+  },
+  {
+    "id": 151,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-16",
+    "time": "18:00"
+  },
+  {
+    "id": 152,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-16",
+    "time": "18:00"
+  },
+  {
+    "id": 153,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-16",
+    "time": "20:30"
+  },
+  {
+    "id": 154,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-16",
+    "time": "20:30"
+  },
+  {
+    "id": 155,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-16",
+    "time": "23:00"
+  },
+  {
+    "id": 156,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-16",
+    "time": "23:00"
+  },
+  {
+    "id": 157,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-17",
+    "time": "18:00"
+  },
+  {
+    "id": 158,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-17",
+    "time": "18:00"
+  },
+  {
+    "id": 159,
+    "auditorium": "Lilla Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-17",
+    "time": "20:30"
+  },
+  {
+    "id": 160,
+    "auditorium": "Stora Salongen",
+    "film": "Finch",
+    "date": "2022-0-17",
+    "time": "20:30"
+  },
+  {
+    "id": 161,
+    "auditorium": "Lilla Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-17",
+    "time": "23:00"
+  },
+  {
+    "id": 162,
+    "auditorium": "Stora Salongen",
+    "film": "Eternals",
+    "date": "2022-0-17",
+    "time": "23:00"
+  },
+  {
+    "id": 163,
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2022-0-18",
+    "time": "18:00"
+  },
+  {
+    "id": 164,
+    "auditorium": "Stora Salongen",
+    "film": "Red Notice",
+    "date": "2022-0-18",
+    "time": "18:00"
+  },
+  {
+    "id": 165,
+    "auditorium": "Lilla Salongen",
+    "film": "Finch",
+    "date": "2022-0-18",
+    "time": "20:30"
+  },
+  {
+    "id": 166,
+    "auditorium": "Stora Salongen",
+    "film": "Matrix Resurrections",
+    "date": "2022-0-18",
+    "time": "20:30"
+  },
+  {
+    "id": 167,
+    "auditorium": "Lilla Salongen",
+    "film": "Eternals",
+    "date": "2022-0-18",
+    "time": "23:00"
+  },
+  {
+    "id": 168,
+    "auditorium": "Stora Salongen",
+    "film": "Dune",
+    "date": "2022-0-18",
+    "time": "23:00"
+  }
 ]
