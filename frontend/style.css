@@ -31,7 +31,16 @@ width: 296.5px;
 height: auto;
 }
 
-.book-seats{
-  position: absolute;
-  right:20px;
+.about-movie-poster{
+position: absolute;
+top: 700px;
+left: 200px;
+
+}
+
+.movie-trailer{
+    height: 600px;
+    width: 100%;
+    position:relative;
+    top: 30px;
 }
