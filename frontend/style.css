@@ -44,3 +44,9 @@ left: 200px;
     position:relative;
     top: 30px;
 }
+
+.movie-title{
+    position: absolute;
+    top: 1050px;
+    left: 510px;
+}
