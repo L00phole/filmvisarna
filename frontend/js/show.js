@@ -1,3 +1,4 @@
+// Adds components to show data for the show with the given id
 async function selectedShow(showId) {
     showData = await JSON._load('shows.json');
     let showInfoDiv = document.getElementById('show');
@@ -20,6 +21,8 @@ async function selectedShow(showId) {
     showInfoDiv.appendChild(time);
 }
 
+// Reads the show id from URLSearchParams and passes it with a call
+// to the selectedShow function.
 let urlParam = new URLSearchParams(window.location.search);
 let url = new URL(window.location.href);
 let urlSearchParamsId = url.searchParams.get('id');

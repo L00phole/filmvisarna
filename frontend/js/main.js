@@ -9,9 +9,6 @@ async function readJSON() {
     data[type] = await JSON._load(type + '.json');
   }
 
-  // Run start function
-  // start();
-
   // Calls function to create a show schedule for n(4) given weeks.
   createShowSchedule(4);
 }
@@ -21,42 +18,4 @@ function findById(type, id) {
   return data[type].find(x => x.id === id);
 }
 
-/*async function start() {
-  // Calls function to create a show schedule for n(4) given weeks.
-  createShowSchedule(4);
-  //console.log(findById('auditoriums', 2));
-  //console.log(await book(1, [30, 80, 81]));
-  console.log(freeSeats(1));
-  console.log(freeSeats(2));
-  console.log(freeSeats(3));
-  console.log(freeSeats(4));
-}*/
-
 readJSON();
-
-/*
-Exempel
-*/
-
-// Läser filmer från json
-$('#movies').click(function () {
-  console.log(data['films']);
-  for (let i = 0; i < data['films'].length; i++) {
-    let container = document.getElementById("movies");
-
-    let movie = document.createElement('div');
-    movie.innerHTML = data['films'][i].title;
-    movie.addEventListener('click', function () {
-      console.log(JSON.stringify(data['films'][i]));
-      let movieInfo = document.createElement('p');
-      movieInfo.innerHTML = JSON.stringify(data['films'][i])
-      movie.appendChild(movieInfo);
-    });
-
-    container.appendChild(movie);
-  }
-});
-
-$('#tickets').click(function () {
-  console.log(freeSeats(movie));
-});

@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    background-color: black;
+    color: aliceblue;
+}
+
 main{
     background-color: black;
     color: aliceblue;
@@ -12,6 +18,7 @@ main{
     background-color: black;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: aliceblue;
+    width: 15%;
 }
 
 #dateSelect{
@@ -24,14 +31,57 @@ main{
 
 #showInfo{
     align-items: center;
+    width: 250px;
+}
+
+#movies{
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.filmScheduleDiv{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.filmScheduleSpan{
+    align-items: center;
+    margin: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+.showDataDiv{
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 #Finch{
-width: 296.5px;
-height: auto;
+    width: 296.5px;
+    height: auto;
 }
 
-.book-seats{
-  position: absolute;
-  right:20px;
+.about-movie-poster{
+    position: static; /* ändrad från absolute till static */
+    margin: 50px;
+    top: 700px;
+    left: 200px;
+}
+
+.movie-trailer{
+    height: 600px;
+    width: 100%;
+    position:relative;
+    top: 30px;
 }
