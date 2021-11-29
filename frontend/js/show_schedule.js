@@ -52,7 +52,8 @@ async function createShowSchedule(weeks) {
             date.setMinutes(00);
         }
         // Assign two variables the date and time as strings
-        let dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+        //let dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+        let dateString = date.toISOString().slice(0, 10);
         let time = `${date.getHours()}:${date.getMinutes()}`;
         if (date.getMinutes() == 0) {
             time = `${date.getHours()}:${date.getMinutes()}0`;
@@ -113,11 +114,10 @@ $('#dateSelect').on('change', function () {
     // Containers to store info about the shows
     let showInfoContainer = document.getElementById('showSchedule');
     document.getElementById('showInfo').innerHTML = "";
+    let showInfo = document.getElementById('showInfo');
     // Iterates over the shows and creates div elements to store
     // info about them.
     for (let show of shows) {
-        let showFilmTitle = document.createElement('p');
-
         let showDiv = document.createElement('div');
         showDiv.innerHTML += `
             ${show.film}
@@ -135,7 +135,6 @@ $('#dateSelect').on('change', function () {
         // Add an on click event to the recently created div,
         // redirect to the clicked movies' seat booking page
         showDiv.setAttribute('id', 'showDiv_' + show.id);
-        showDiv.setAttribute('href', 'show-' + show.id);
         $('#showDiv_' + show.id).on("click", function () {
             // Assigns the window location the current location and adds show.html with
             // a show id parameter.
@@ -153,8 +152,3 @@ $('#dateSelect').on('change', function () {
 
     showInfoContainer.appendChild(showInfo);
 });
-
-// Get the scheduled shows for the film with the given title
-function getShowsForFilm(filmTitle) {
-    return data['shows'].filter(film => film.film === filmTitle);
-}

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Filmvisarna</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -14,15 +14,27 @@
 
     <h1>Biograf</h1>
 
-    <div id="movies">Filmer</div>
+    <div id="movies">
+      <a href="/movies html/Dune.html"><img id="Dune" src="/images/Dune.jpg" alt="Dune movie"></a>
 
-    <div id="showSchedule">
-      <h2>Visningar</h2>
-      <p>Välj datum</p>
-      <select id="dateSelect"></select>
-      <div id="showInfo"></div>
+      <a href="/movies html/Eternals.html"><img id="Eternals" src="/images/Eternals.png" alt="Eternals movie"></a>
+
+      <a href="/movies html/Finch.html"><img id="Finch" src="/images/Finch.png" alt="Finch movie"></a>
+
+      <a href="/movies html/Red-Notice.html"><img id="Red-Notice" src="/images/Red-Notice.png"
+          alt="Red Notice movie"></a>
+
+      <a href="/movies html/The-Matrix-Resurrection.html"><img id="The-Matrix-Resurrections"
+          src="/images/The-Matrix-Resurrections.png" alt="The Matrix Resurrections movie"></a>
+
+      <div id="showSchedule">
+        <h2>Visningar</h2>
+        <p>Välj datum</p>
+        <select id="dateSelect"></select>
+        <div id="showInfo"></div>
+      </div>
+
     </div>
-
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -30,6 +42,7 @@
   <script src="/js/book.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/show_schedule.js"></script>
+
 </body>
 
 </html>
