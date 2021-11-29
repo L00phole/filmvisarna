@@ -24,7 +24,6 @@ function populateFilmShowSchedule(filmTitle) {
     filmSchedule.setAttribute('class', 'filmScheduleDiv');
     container.appendChild(filmSchedule);
 
-    console.log(data['shows']);
     // Iterate over the shows
     for (let show of data['shows']) {
         // If show['film'] is the same as the given argument for filmTitle
