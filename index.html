@@ -1,27 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/frontend/style.css">
-  <title>Filmvisarna</title>
+  <title>Film Visarna</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="moviePosters">
-    <a href="/movies html/Dune.html"><img id="Dune" src="/images/Dune.jpg" alt="Dune movie"></a>
+  <!--<div class="slideshow-container">
 
-    <a href="/movies html/Eternals.html"><img id="Eternals" src="/images/Eternals.png" alt="Eternals movie"></a>
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="/images/eternals.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="/images/finch.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="/images/matrix.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>-->
 
-    <a href="/movies html/Finch.html"><img id="Finch" src="/images/Finch.png" alt="Finch movie"></a>
 
-    <a href="/movies html/Red-Notice.html"><img id="Red-Notice" src="/images/Red-Notice.png" alt="Red Notice movie"></a>
+<div class="display-container">
+  <div>
+  <img class="mySlides" src="/images/red_notice_poster_2.jpg">
+  <img class="mySlides" src="/images/finch.png">
+  <img class="mySlides" src="/images/eternals.jpg">
+  <img class="mySlides" src="/images/matrix.jpg">
 
-    <a href="/movies html/The-Matrix-Resurrection.html"><img id="The-Matrix-Resurrections"
-        src="/images/The-Matrix-Resurrections.png" alt="The Matrix Resurrections movie"></a>
+  <button class="button-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="button-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+</div>
+
+
+
+
+
+
+  
+  <div class="description">
+    <div>
+      <img src="/images/Dune.jpg">
+      <h3>Dune</h3>
+    </div>
   </div>
-</body>
+  <div class="description">
+    <div>
+      <img src="/images/eternals.jpg">
+      <h3>Eternals</h3>
+    </div>
+  </div> 
+  <div class="description">
+    <div>
+      <img src="/images/finch.png">
+      <h3>Finch</3>
+    </div>
+  </div> 
+  <div class="description">
+    <div>
+      <img src="/images/matrix.jpg">
+      <h3>Matrix</h3>
+    </div>
+  </div> 
+  <div class="description">
+    <div>
+      <img src="/images/red_notice_poster_2.jpg">
+      <h3>Red Notice</h3>
+    </div>
+  </div> 
+  <div class="description">
+    <div>
+      <img src="/images/call me by your name.jpg">
+      <h3>Call me by your name</h3>
+    </div>
+  </div> 
+   
 
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/jsonflex.js"></script>
+  <script src="/js/book.js"></script>
+  <script src="/frontend/js/main.js"></script>
+
+  
+</body>
 </html>
