@@ -10,7 +10,7 @@ async function readJSON() {
   }
 
   // Run start function
-  start();
+  createShowSchedule(4);
 }
 
 // A helper to find things by id (films, shows etc.)
@@ -18,32 +18,50 @@ function findById(type, id) {
   return data[type].find(x => x.id === id);
 }
 
-async function start() {
-  // console.log(findById('auditoriums', 2));
+function selectedShow(show) {
+  console.log("Gå till salong för visningen: ");
+  console.log(show);
+}
+
+/*async function start() {
+  // Calls function to create a show schedule for n(4) given weeks.
+  createShowSchedule(4);
+  //console.log(findById('auditoriums', 2));
   //console.log(await book(1, [30, 80, 81]));
   console.log(freeSeats(1));
-}
+  console.log(freeSeats(2));
+  console.log(freeSeats(3));
+  console.log(freeSeats(4));
+}*/
 
 readJSON();
 
+let images =1;
+displayimg(images);
 
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+function nextimg(n){
+    displayimg(images += n)
 }
 
-function showDivs(n) {
-  console.log("test");
-  let i;
-  let x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
+function currentSlide(n){
+    displayimg(images = n)
 }
 
+function displayimg(n){
+    let i;
+    let image = document.getElementsByClassName("image");
 
+    if(n > image.length){
+        images = 1;
+    }
+
+    if(n < 1){
+        images = image.length;
+    }
+
+    for(i=0; i < image.length; i++){
+        image[i].style.display = "none";
+    }
+
+    image[images - 1].style.display ="block";
+}
