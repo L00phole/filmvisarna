@@ -73,10 +73,24 @@ main{
 }
 
 .about-movie-poster{
+<<<<<<< HEAD
     position: static; /* ändrad från absolute till static */
     margin: 50px;
     top: 700px;
     left: 200px;
+=======
+position: absolute;
+top: 700px;
+left: 200px;
+
+}
+
+.movie-trailer{
+    height: 600px;
+    width: 100%;
+    position:relative;
+    top: 30px;
+>>>>>>> 309d28e78cde21b2142b7206fcd8bf4bbc19e87e
 }
 
 .movie-trailer{
