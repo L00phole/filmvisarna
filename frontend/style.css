@@ -8,6 +8,61 @@ main{
     background-color: black;
     color: aliceblue;
 }
+header{
+    border-bottom:solid 1px aliceblue;
+   
+   background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
+    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
+}
+.nav-list {
+float:left;
+margin: 0;
+padding: 0;
+
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 50px;
+    
+    
+}
+nav li{
+    display: inline-block;
+    margin-right: 170px;
+    padding-top: 8px;
+
+    position: relative;
+    
+}
+.nav-list a{
+    color: rgb(199, 199,199);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.nav-list a:hover{
+    color:#b1a436;}
+    
+
+.nav-list a:hover ::before{
+    width: 100%;
+
+}
+header ::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+    max-width: 8%;
+    height: auto;
+    float: left;
+    padding-top: 7px;
+   
+}
+
 
 #showSchedule{
     float: right;
