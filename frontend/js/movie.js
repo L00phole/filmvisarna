@@ -29,8 +29,11 @@ function populateFilmShowSchedule(filmTitle) {
         // If show['film'] is the same as the given argument for filmTitle
         // create elements for displaying data for the show.
         if (show['film'] == filmTitle) {
+            // Creates div component to display show data in, and sets attributes
+            // for class and id
             let showDataDiv = document.createElement('div');
             showDataDiv.setAttribute('class', 'showDataDiv')
+            showDataDiv.setAttribute('id', 'showDataDiv_' + show.id);
 
             let date = document.createElement('span');
             date.innerHTML = show['date'];
@@ -45,7 +48,15 @@ function populateFilmShowSchedule(filmTitle) {
 
             showDataDiv.appendChild(date);
             showDataDiv.appendChild(auditorium);
+            showDataDiv.style.backgroundColor = "darkgrey";
+
             filmSchedule.appendChild(showDataDiv);
+
+            // Add click event to to showDataDiv, the event redirects to the page
+            // for the selected show.
+            $('#showDataDiv_' + show.id).on("click", function () {
+                window.location.assign(`${window.location['origin']}/show.html?id=${show.id}`);
+            });
         }
     }
 
