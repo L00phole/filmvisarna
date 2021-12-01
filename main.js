@@ -39,6 +39,7 @@ readJSON();
 let images =1;
 displayimg(images);
 
+
 function nextimg(n){
     displayimg(images += n)
 }
