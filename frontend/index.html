@@ -2,30 +2,24 @@
 <html lang="en">
 
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('#navigation').load('nav.html');
+    });
+  </script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Filmvisarna</title>
   <link rel="stylesheet" href="/style.css">
+
 </head>
 
 <body>
+  <div id="navigation"></div>
   <main>
-    <header>
-      <div class="nav-container">
-
-        <img class="logo" src="images/logo.jpg" alt="logo"></ul>
-
-        <nav class="nav-list">
-          <ul>
-            <li><a href="#">Start</a></li>
-            <li><a href="#">Filmer</a></li>
-            <li><a href="#">Om oss</a></li>
-            <li><a href="#">kontakt</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
     <div id="movies">
       <a href="/movies html/Dune.html"><img id="Dune" src="/images/Dune.jpg" alt="Dune movie"></a>
@@ -51,7 +45,7 @@
       <div id="showInfo"></div>
     </div>
   </main>
-
+  <footer id="bottom"></footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/jsonflex.js"></script>
   <script src="/js/book.js"></script>

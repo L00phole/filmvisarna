@@ -24,6 +24,12 @@ body{
     color: aliceblue;
 }
 
+    #navigation{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+ 
 main{
     background-color: black;
     color: aliceblue;
