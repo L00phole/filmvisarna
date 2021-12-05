@@ -22,7 +22,7 @@ function findById(type, id) {
 
 readJSON();
 
-/*let images = 1;
+let images = 1;
 displayimg(images);
 
 function nextimg(n) {
@@ -50,4 +50,4 @@ function displayimg(n) {
   }
 
   image[images - 1].style.display = "block";
-}*/
+}
