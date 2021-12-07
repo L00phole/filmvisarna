@@ -36,6 +36,7 @@ async function selectedShow(showId) {
     availableSeatsCount = auditoriumTotalSeats - bookedSeatsCount.length;
     let availableSeats = document.createElement('p');
     availableSeats.innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
+    availableSeats.setAttribute('id', 'availableSeatsCount')
     showInfoDiv.appendChild(availableSeats);
 
     showInfoDiv.style.fontSize = "25px";
@@ -77,6 +78,8 @@ $('#ordCategorySub').click(() => {
 $('#ordCategoryAdd').click(() => {
     if (ordTickets < availableSeatsCount) {
         ordTickets += 1;
+        availableSeatsCount -= 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('ordCategoryCount').innerHTML = ordTickets;
@@ -97,6 +100,8 @@ $('#seniorCategorySub').click(() => {
 $('#seniorCategoryAdd').click(() => {
     if (seniorTickets < availableSeatsCount) {
         seniorTickets += 1;
+        availableSeatsCount -= 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
@@ -117,6 +122,8 @@ $('#childCategorySub').click(() => {
 $('#childCategoryAdd').click(() => {
     if (childTickets < availableSeatsCount) {
         childTickets += 1;
+        availableSeatsCount -= 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('childCategoryCount').innerHTML = childTickets;
