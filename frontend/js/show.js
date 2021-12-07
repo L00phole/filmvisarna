@@ -68,6 +68,8 @@ async function getSelectedShowBookedSeats(showId) {
 $('#ordCategorySub').click(() => {
     if (ordTickets != 0) {
         ordTickets -= 1;
+        availableSeatsCount += 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('ordCategoryCount').innerHTML = ordTickets;
@@ -90,6 +92,8 @@ $('#ordCategoryAdd').click(() => {
 $('#seniorCategorySub').click(() => {
     if (seniorTickets != 0) {
         seniorTickets -= 1;
+        availableSeatsCount += 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
@@ -112,6 +116,8 @@ $('#seniorCategoryAdd').click(() => {
 $('#childCategorySub').click(() => {
     if (childTickets != 0) {
         childTickets -= 1;
+        availableSeatsCount += 1;
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('childCategoryCount').innerHTML = childTickets;
