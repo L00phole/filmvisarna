@@ -11,9 +11,38 @@
 
 <body>
 
-    <main>
+    <main id="showMain">
+        <div id="showInfo"></div>
 
-        <div id="show">Visning</div>
+        <div id="customerCategorySelection">
+            <div class="customerCategoryDiv">
+                <h3 id="customerCategoryH">Välj antal biljetter</h3>
+                <p class="customerCategoryP">
+                    Ordinarie
+                    <span class="customerCategorySpanTop">
+                        <span class="customerCategorySub" id="ordCategorySub">-</span>
+                        <span id="ordCategoryCount">0</span>
+                        <span class="customerCategoryAdd" id="ordCategoryAdd">+</span>
+                    </span>
+                </p>
+                <p class="customerCategoryP">
+                    Pensionär
+                    <span class="customerCategorySpanTop">
+                        <span class="customerCategorySub" id="seniorCategorySub">-</span>
+                        <span id="seniorCategoryCount">0</span>
+                        <span class="customerCategoryAdd" id="seniorCategoryAdd">+</span>
+                    </span>
+                </p>
+                <p class="customerCategoryP">
+                    Barn
+                    <span class="customerCategorySpanTop">
+                        <span class="customerCategorySub" id="childCategorySub">-</span>
+                        <span id="childCategoryCount">0</span>
+                        <span class="customerCategoryAdd" id="childCategoryAdd">+</span>
+                    </span>
+                </p>
+            </div>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/jsonflex.js"></script>
