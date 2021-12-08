@@ -4,6 +4,7 @@ let seniorTickets = 0;
 let childTickets = 0;
 
 let availableSeatsCount = 0;
+let selectedSeatsCount = 0;
 
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
@@ -14,7 +15,8 @@ async function selectedShow(showId) {
     // Reads JSON file with auditorium data, gets the total number of
     // seats for the auditorium of the selected show. 
     let auditoriumData = await JSON._load('auditoriums.json');
-    let auditoriumTotalSeats = auditoriumData.find(aud => aud.name == showInfo.auditorium).seats;
+    auditoriumData = auditoriumData.find(aud => aud.name == showInfo.auditorium);
+    let auditoriumTotalSeats = auditoriumData.seats;
 
     // Creates components to display info about the selected show
     let film = document.createElement('p')
@@ -40,6 +42,41 @@ async function selectedShow(showId) {
     showInfoDiv.appendChild(availableSeats);
 
     showInfoDiv.style.fontSize = "25px";
+
+    renderAuditorium(auditoriumData);
+}
+
+// Renders auditorium and sets classes to components
+function renderAuditorium(auditoriumData) {
+    // Declares a variable for the container of rows and seats
+    let seats = document.getElementById('seats');
+    // Runs a loop for each row in the auditorium, adds a div for each row
+    for (let i = 0; i < auditoriumData.seatsPerRow.length; i++) {
+        let row = document.createElement('div');
+        row.setAttribute('class', 'row')
+        // Nested loop that runs as many times as there are seats in the row,
+        // adds a div for each seat
+        for (let j = 0; j < auditoriumData.seatsPerRow[i]; j++) {
+            let seat = document.createElement('div');
+            seat.setAttribute('class', 'seat');
+            seat.setAttribute('id', `seat_${i}_${j}`);
+            row.appendChild(seat);
+        }
+        // Adds the row to the container
+        seats.appendChild(row);
+    }
+
+    // Add events to select and deselect seats
+    $('.seat').click(function () {
+        if ($(this).attr('class') == 'seat') {
+            $(this).addClass('seatSelected');
+            selectedSeatsCount += 1;
+        }
+        else {
+            $(this).removeClass('seatSelected');
+            selectedSeatsCount -= 1;
+        }
+    });
 }
 
 // Returns data from the show with the given id
