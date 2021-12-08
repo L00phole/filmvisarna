@@ -278,3 +278,38 @@ header ::after{
     cursor: pointer;
     background-color: #949494;
 }
+
+#auditoriumContainer{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.row{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.seat{
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+}
+
+.seatOccupied{
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    margin-bottom: 10px;
+    background-color: darkred;
+}
+
+.seatSelected{
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    margin-bottom: 10px;
+    background-color: #605f5d;
+}
