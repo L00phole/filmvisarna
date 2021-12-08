@@ -66,7 +66,8 @@ nav li{
     text-decoration: none;
     text-transform: capitalize;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+    font-size: 18px;
+    font-weight: bold;
 }
 .nav-list a:hover{
     color:#b1a436;}
@@ -99,7 +100,7 @@ header ::after{
     background-color: black;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: aliceblue;
-    width: 15%;
+    width: 12%;
 }
 
 #dateSelect{
@@ -117,7 +118,7 @@ header ::after{
 
 #movies{
     text-align: center;
-    width: 100%;
+    width: 85%;
     align-items: center;
 
 }
@@ -164,14 +165,14 @@ header ::after{
 .movie-trailer{
     height: 600px;
     width: 100%;
-    position:relative;
+    position:static;
     top: 30px;
 }
 
 .movie-title{
     position: absolute;
-    top: 600px;
-    left: 300px;
+    top: 1050px;
+    left: 510px;
 }
 .movie-trailer-container{
     max-width: 100%;
@@ -187,9 +188,8 @@ header ::after{
 }
 
 .container{
-     width: 90%;
-     height: 400px;
-     position: relative;
+     width: 85%;
+     position: static;
      top: 50px;
      left: 50px;
  }
@@ -203,7 +203,7 @@ header ::after{
  }
  
  .container .button{
-     position: absolute;
+     position: inherit;
      top: 60%;
      left: 5px;
      width: 100%;
