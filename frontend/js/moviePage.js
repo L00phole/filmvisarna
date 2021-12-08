@@ -5,6 +5,7 @@ async function startProgram() {
     await readJson();
     renderTitle();
     renderTrailer();
+    renderDescription();
   }
 }
 // read the json file and creates a variable called movie with the data from the json
@@ -28,7 +29,18 @@ function renderTrailer() {
   document.querySelector('.movie-trailer-container').innerHTML =
     movie.map(function (movie) {
       return `
-      <iframe src="${movie.youtubeTrailers}" frameborder="0"></iframe>
+      <iframe class="movie-trailer-moviePage" src="${movie.youtubeTrailers}" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      `
+    }).join('');
+}
+
+function renderDescription() {
+  document.querySelector('.movie-description-container').innerHTML =
+    movie.map(function (movie) {
+      return `
+      <p> ${movie.actors} </p>
+      <img src="${movie.images}" alt="${movie.title} poster">
       `
     }).join('');
 }
