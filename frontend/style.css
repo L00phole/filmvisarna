@@ -175,7 +175,7 @@ header ::after{
 }
 
 .container{
-     width: 90%;
+     width: 92%;
      height: 400px;
      position: relative;
      top: 50px;
@@ -193,7 +193,6 @@ header ::after{
  .container .button{
      position: absolute;
      top: 60%;
-     left: 5px;
      width: 100%;
      display: flex;
      justify-content: space-between;
