@@ -126,7 +126,7 @@ header ::after{
 .filmScheduleDiv{
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     grid-gap: 20px;
     padding: 20px;
@@ -351,5 +351,46 @@ height: 40px;
 clear: both;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.dropdown {
+position: relative;
+margin-top: 50px;
+margin-right: 30px;
+margin-left: 150px;
+}
 
+.dropdown__content {
+display: none;
+left: 0;
+paddingtop: 4px;
+position: absolute;
+top: 100%;
+background-color: rgb(0, 0, 0);
+zindex: 9999;
+height: 150px;
+width: 400px;
+}
+
+.dropdown:hover .dropdown__content {
+display: block;
+}
+
+.container__block {
+
+   align-items: start;
+   display: flex;
+   margin-left: 16px;
+}
+
+.container__media {
+margin-top: 50px;
+margin-right: 16px;
+margin-left: 16px;
+
+width: 400px;
+}
+
+.container__content {
+
+flex: 0.85;
+}
 
