@@ -40,6 +40,7 @@ function renderDescription() {
     movie.map(function (movie) {
       return `
       <p> ${movie.actors} </p>
+      <img src="${movie.images}" alt="${movie.title} poster">
       `
     }).join('');
 }

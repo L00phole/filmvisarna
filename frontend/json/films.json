@@ -28,8 +28,8 @@
     "shortDescription": "<p>Fjärde filmen i The Matrix-franchisen.</p>",
     "description": "<p>Tjugo år efter händelserna i The Matrix Revolutions lever Neo ett till synes vanligt liv som Thomas A. Anderson i San Francisco där hans terapeut skriver ut blåa piller till honom.</p><p>Varken han eller Trinity känner igen varandra. Men Morpheus erbjuder honom det röda pillret och öppnar hans sinne för Matrix-världen igen.</p>",
     "images": [
-      "matrix_poster_1.jpg",
-      "matrix_poster_2.jpg"
+      "/frontend/images/matrix_poster_1.jpg",
+      "/frontend/images/matrix_poster_2.jpg"
     ],
     "youtubeTrailers": [
       "https://www.youtube.com/embed/9ix7TUGVYIo"
