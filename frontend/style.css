@@ -174,20 +174,11 @@ header ::after{
 }
 
 .container{
-<<<<<<< HEAD
     width: 85%;
     position: static;
     top: 50px;
     left: 50px;
 }
-=======
-     width: 92%;
-     height: 400px;
-     position: relative;
-     top: 50px;
-     left: 50px;
- }
->>>>>>> 793dc55ef49fa11b8a4e3c4e63af33db7b3edb43
  
 .container .image img{
     width: 100%;
@@ -195,8 +186,7 @@ header ::after{
     object-fit: cover;
     border-radius: 15px;
 }
- 
-<<<<<<< HEAD
+
 .container .button{
     position: inherit;
     top: 60%;
@@ -205,15 +195,6 @@ header ::after{
     display: flex;
     justify-content: space-between;
 }
-=======
- .container .button{
-     position: absolute;
-     top: 60%;
-     width: 100%;
-     display: flex;
-     justify-content: space-between;
- }
->>>>>>> 793dc55ef49fa11b8a4e3c4e63af33db7b3edb43
  
 .container .button a{
     width: 40px;
