@@ -66,6 +66,8 @@ nav li{
     text-decoration: none;
     text-transform: capitalize;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
     
 }
 .nav-list a:hover{
@@ -163,7 +165,7 @@ header ::after{
 .movie-trailer{
     height: 600px;
     width: 100%;
-    position:relative;
+    position:static;
     top: 30px;
 }
 
