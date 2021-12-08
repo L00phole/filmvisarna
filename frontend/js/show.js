@@ -1,9 +1,13 @@
-// declare variables to hold data for ticket counts
+// Declare variables to hold data for ticket counts
 let ordTickets = 0;
 let seniorTickets = 0;
 let childTickets = 0;
 
+// Declare variables to keep track of available seats, the number
+// of seats the user needs to select, and the number of seats that
+// has been selected
 let availableSeatsCount = 0;
+let seatsToSelect = 0;
 let selectedSeatsCount = 0;
 
 // Adds components to show data for the show with the given id
@@ -69,13 +73,19 @@ function renderAuditorium(auditoriumData) {
     // Add events to select and deselect seats
     $('.seat').click(function () {
         if ($(this).attr('class') == 'seat') {
+            if (seatsToSelect < 1) {
+                return;
+            }
             $(this).addClass('seatSelected');
             selectedSeatsCount += 1;
+            seatsToSelect -= 1;
         }
         else {
             $(this).removeClass('seatSelected');
             selectedSeatsCount -= 1;
+            seatsToSelect += 1;
         }
+        updateSeatsToSelect();
     });
 }
 
@@ -106,10 +116,12 @@ $('#ordCategorySub').click(() => {
     if (ordTickets != 0) {
         ordTickets -= 1;
         availableSeatsCount += 1;
+        seatsToSelect -= 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('ordCategoryCount').innerHTML = ordTickets;
+    updateSeatsToSelect();
 });
 
 // Add click event to the component with the given id with functionality
@@ -118,10 +130,12 @@ $('#ordCategoryAdd').click(() => {
     if (ordTickets < availableSeatsCount) {
         ordTickets += 1;
         availableSeatsCount -= 1;
+        seatsToSelect += 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('ordCategoryCount').innerHTML = ordTickets;
+    updateSeatsToSelect();
 });
 
 // Add click event to the component with the given id with functionality
@@ -130,10 +144,12 @@ $('#seniorCategorySub').click(() => {
     if (seniorTickets != 0) {
         seniorTickets -= 1;
         availableSeatsCount += 1;
+        seatsToSelect -= 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
+    updateSeatsToSelect();
 });
 
 // Add click event to the component with the given id with functionality
@@ -142,10 +158,12 @@ $('#seniorCategoryAdd').click(() => {
     if (seniorTickets < availableSeatsCount) {
         seniorTickets += 1;
         availableSeatsCount -= 1;
+        seatsToSelect += 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
+    updateSeatsToSelect();
 });
 
 // Add click event to the component with the given id with functionality
@@ -154,10 +172,12 @@ $('#childCategorySub').click(() => {
     if (childTickets != 0) {
         childTickets -= 1;
         availableSeatsCount += 1;
+        seatsToSelect -= 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('childCategoryCount').innerHTML = childTickets;
+    updateSeatsToSelect();
 });
 
 // Add click event to the component with the given id with functionality
@@ -166,11 +186,18 @@ $('#childCategoryAdd').click(() => {
     if (childTickets < availableSeatsCount) {
         childTickets += 1;
         availableSeatsCount -= 1;
+        seatsToSelect += 1;
         document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     }
 
     document.getElementById('childCategoryCount').innerHTML = childTickets;
+    updateSeatsToSelect();
 });
+
+// Update component to display how many seats that need to be selected
+function updateSeatsToSelect() {
+    document.getElementById('seatsToSelect').innerHTML = `Välj säten (${seatsToSelect})`;
+}
 
 // Reads the show id from URLSearchParams and passes it with a call
 // to the selectedShow function.
