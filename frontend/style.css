@@ -90,7 +90,6 @@ header ::after{
    
 }
 
-
 #showSchedule{
     float: right;
     display: flex;
@@ -111,9 +110,16 @@ header ::after{
     color: aliceblue;
 }
 
+#movieTitle{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
 #showInfo{
-    align-items: center;
-    width: 250px;
+    right: 1200px;
+    max-width: 300px;
+    position: absolute;
 }
 
 #movies{
@@ -300,6 +306,10 @@ header ::after{
     text-align: center;
 }
 
+#seatsToSelect{
+    margin: 20px;
+}
+
 .row{
     justify-content: center;
     align-items: center;
@@ -307,27 +317,33 @@ header ::after{
 }
 
 .seat{
-    height: 12px;
-    width: 15px;
-    margin: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
     margin-bottom: 10px;
-    background-color: aliceblue;
+    background-color: #eae9e8;
 }
 
 .seatOccupied{
-    height: 12px;
-    width: 15px;
-    margin: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
     margin-bottom: 10px;
     background-color: darkred;
 }
 
 .seatSelected{
-    height: 12px;
-    width: 15px;
-    margin: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
     margin-bottom: 10px;
-    background-color: #605f5d;
+    background-color: rgb(70, 39, 39);
 }
 
 div#bottom {

@@ -23,10 +23,11 @@ async function selectedShow(showId) {
     let auditoriumTotalSeats = auditoriumData.seats;
 
     // Creates components to display info about the selected show
-    let film = document.createElement('p')
+    /*let film = document.createElement('p')
     film.innerHTML = showInfo.film;
     film.style.fontSize = "40px";
-    showInfoDiv.appendChild(film);
+    showInfoDiv.appendChild(film);*/
+    movieTitle.innerHTML = showInfo.film;
 
     let auditorium = document.createElement('p')
     auditorium.innerHTML = showInfo.auditorium;
@@ -47,11 +48,17 @@ async function selectedShow(showId) {
 
     showInfoDiv.style.fontSize = "25px";
 
+    // Call function to render auditorium
     renderAuditorium(auditoriumData);
 }
 
 // Renders auditorium and sets classes to components
-function renderAuditorium(auditoriumData) {
+async function renderAuditorium(auditoriumData) {
+    console.log(auditoriumData);
+    let bookings = await JSON._load('bookings.json');
+    console.log(bookings);
+    let bookedSeats = bookings.find(booked => booked.showId == auditoriumData.id);
+
     // Declares a variable for the container of rows and seats
     let seats = document.getElementById('seats');
     // Runs a loop for each row in the auditorium, adds a div for each row
@@ -113,7 +120,7 @@ async function getSelectedShowBookedSeats(showId) {
 // Add click event to the component with the given id with functionality
 // to keep track of the count of bookings for each category.
 $('#ordCategorySub').click(() => {
-    if (ordTickets != 0) {
+    if (ordTickets != 0 && seatsToSelect != 0) {
         ordTickets -= 1;
         availableSeatsCount += 1;
         seatsToSelect -= 1;
@@ -141,7 +148,7 @@ $('#ordCategoryAdd').click(() => {
 // Add click event to the component with the given id with functionality
 // to keep track of the count of bookings for each category.
 $('#seniorCategorySub').click(() => {
-    if (seniorTickets != 0) {
+    if (seniorTickets != 0 && seatsToSelect != 0) {
         seniorTickets -= 1;
         availableSeatsCount += 1;
         seatsToSelect -= 1;
@@ -169,7 +176,7 @@ $('#seniorCategoryAdd').click(() => {
 // Add click event to the component with the given id with functionality
 // to keep track of the count of bookings for each category.
 $('#childCategorySub').click(() => {
-    if (childTickets != 0) {
+    if (childTickets != 0 && seatsToSelect != 0) {
         childTickets -= 1;
         availableSeatsCount += 1;
         seatsToSelect -= 1;
