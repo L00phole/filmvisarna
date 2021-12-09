@@ -41,6 +41,7 @@ function renderDescription() {
       return `
       <p> ${movie.actors} </p>
       <img src="${movie.images}" alt="${movie.title} poster">
+      <p> ${movie.description} </p>
       `
     }).join('');
 }
