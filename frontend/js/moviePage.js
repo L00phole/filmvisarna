@@ -1,4 +1,4 @@
-let movie;
+let movie, poster, titles;
 
 async function startProgram() {
   if (location.pathname.includes('moviePage')) {
@@ -14,7 +14,7 @@ async function readJson() {
   movie = await rawData.json();
 }
 
-function renderTitle() {
+function renderTitle(title) {
   console.log('Running render!');
   document.querySelector('.movie-title').innerHTML =
     movie.map(function (movie) {
@@ -39,8 +39,8 @@ function renderDescription() {
   document.querySelector('.movie-description-container').innerHTML =
     movie.map(function (movie) {
       return `
-      <p> ${movie.actors} </p>
       <img src="${movie.images}" alt="${movie.title} poster">
+      <p><br> ${movie.actors} </p>
       <p> ${movie.description} </p>
       `
     }).join('');

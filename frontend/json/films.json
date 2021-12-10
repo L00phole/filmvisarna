@@ -18,14 +18,14 @@
     "director": "Lana Wachowski",
     "actors": [
       "Keanu Reeves",
-      "Carrie-Anne Moss",
-      "Yahya Abdul-Mateen II",
-      "Jessica Henwick",
-      "Jonathan Groff",
-      "Neil Patrick Harris",
-      "Jada Pinkett Smith"
+      "<br>Carrie-Anne Moss",
+      "<br>Yahya Abdul-Mateen II",
+      "<br>Jessica Henwick",
+      "<br>Jonathan Groff",
+      "<br>Neil Patrick Harris",
+      "<br>Jada Pinkett Smith"
     ],
-    "shortDescription": "<p>Fjärde filmen i The Matrix-franchisen.</p>",
+    "shortDescription": "Fjärde filmen i The Matrix-franchisen.",
     "description": "<p>Tjugo år efter händelserna i The Matrix Revolutions lever Neo ett till synes vanligt liv som Thomas A. Anderson i San Francisco där hans terapeut skriver ut blåa piller till honom.</p><p>Varken han eller Trinity känner igen varandra. Men Morpheus erbjuder honom det röda pillret och öppnar hans sinne för Matrix-världen igen.</p>",
     "images": [
       "/frontend/images/matrix_poster_1.jpg",
@@ -83,7 +83,7 @@
       "Kumail Nanjiani"
     ],
     "shortDescription": "<p>Marvels senaste mästerverk i MCU.</p>",
-    "description": "<p>Eternals är en grupp superhjältar som har skyddat Jorden sedan tidernas begynnelse.</p><p>När monstruösa fiender, sedan länge bortglömda, plötsligt återvänder tvingas Eternals återförenas för att ännu en gång försvara mänskligheten.</p>",
+    "description": "<p>Eternals är en grupp superhjältar som har skyddat Jorden sedan tidernas begynnelse.<br>När monstruösa fiender, sedan länge bortglömda, plötsligt återvänder tvingas Eternals återförenas för att ännu en gång försvara mänskligheten.</p>",
     "images": [
       "eternals_poster_1.jpg",
       "eternals_poster_2.jpg"
