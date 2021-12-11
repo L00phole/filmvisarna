@@ -193,6 +193,8 @@ header ::after{
     height: 400px;
 }
 
+/*Style for the slideshow*/
+
 .container{
      width: 85%;
      position: static;
@@ -229,6 +231,55 @@ header ::after{
      background: rgba(0, 0, 0, 0.8);
      font-size: 20px;
  }
+
+/*Style for about page*/
+.content-container{
+padding:30px;
+font-family:'Roboto';
+font-size:16px;
+font-weight:300;
+line-height:24px;
+}
+.content-container p{
+margin-bottom:15px;
+text-align: justify;
+}
+.image{
+width:450px;
+position:static;
+box-shadow:0 0 5px rgba(0,0,0,.4);
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.image img{
+width:100%;
+height:auto;
+transform:scale(1) rotate3d(5deg);
+transition: transform .5s;
+}
+
+.image:hover img{
+ -ms-transform: scale(1.3); 
+-webkit-transform: scale(1.3); 
+ transform: scale(1.3) rotate(-10deg); 
+}
+
+.image.right{
+float:right;
+margin-left:20px;
+}
+
+.image.left{
+margin-top: 150px;
+float:left;
+margin-right:20px;
+}
+
+.text{
+    margin-top: 150px;
+}
+
 
 
  /*
