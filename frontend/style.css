@@ -119,7 +119,7 @@ header ::after{
 #showInfo{
    /* right: 1200px;*/
     max-width: 300px;
-/*    position: absolute; */'
+/*    position: absolute; */
 }
 
 #movies{
@@ -175,22 +175,28 @@ header ::after{
     top: 30px;
 }
 
-.movie-title{
+.movie-title-container{
     position: absolute;
-    top: 1050px;
-    left: 510px;
+    top: 650px;
+    left: 500px;
 }
 .movie-trailer-container{
     max-width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .movie-description-container{
     position: relative;
-    left: 700px;
-    top: 300px;
+    left: 800px;
+    top: 200px;
     max-width: 25%;
     height: 400px;
+    overflow: auto;
+}
+.movie-poster-container{
+    position: absolute;
+    left: 2%;
+    top: 630px;
 }
 
 /*Style for the slideshow*/
