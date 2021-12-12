@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/frontend/movies html/desc.css">
+
   <title>The Matrix Resurrection</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
@@ -23,6 +25,18 @@
     allowfullscreen></iframe>
 
   <img class="about-movie-poster" src="/images/The-Matrix-Resurrections.png" alt="">
+  <div class="container__media">
+
+    <div id="content">
+      <p>Handling:</p>
+      <p>Paul Atreides, en briljant och talangfull ung man född med ett storslaget öde, måste resa till den farligaste
+        planeten i universum för att säkra sin familjs och sitt folks framtid.
+        När illasinnade krafter kastas in i en konflikt över tillgången på planetens mest värdefulla råvara – ett ämne
+        med
+        förmåga att låsa upp mänsklighetens fulla potential – kommer bara de som övervinner sina rädslor att överleva.
+      </p>
+    </div>
+  </div>
 
   <div id="filmSchedule"></div>
 
@@ -32,6 +46,60 @@
   <script>
     readJSON('Matrix Resurrections');
   </script>
+
+<script>
+  const FILMS_URL = "/json/films.json";
+  const main = document.getElementById("content");
+  
+  
+  getMovies(FILMS_URL);
+  
+  function getMovies(url){
+      fetch(url).then(res => res.json()).then(data =>{
+          console.log(data[0]);
+          
+  
+          showMovies(data);
+      })
+  
+  }
+  
+  
+  function showMovies(data){
+      main.innerHTML = '';
+      
+      
+      data.forEach(movie => {
+          const {title, genre, actors, description, director} = movie;
+          const movieEl = document.createElement('Dune');
+          movieEl.classList.add('movie');
+          movieEl.innerHTML = `
+          <div class="overview">
+            <div>
+              <h3>Title: ${data[0].title}</h3>
+            </div>
+            <div>
+              <p>Genre: ${data[0].genre}</p>
+            </div>
+            <div>
+              <p>Actors: ${data[0].actors}</p>
+            </div>
+            <div>
+              <p>Director: ${data[0].director}</p>
+            </div>   
+          
+  
+          <div>
+              <h3>Description</h3>
+              ${data[0].description}
+          </div>
+        </div>
+          `
+  
+          main.appendChild(movieEl);
+      });
+  }
+    </script>
 
 </body>
 

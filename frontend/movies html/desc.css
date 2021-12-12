@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200&family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: 'Muntagu';
+}
+
+.container__media {
+    padding-left: 50px;
+    margin-top: 0;
+    margin-right: 16px;
+    margin-left: 16px;
+    
+    width: 400px;
+    flex: 0.85;
+
+    }
+
+
+
+.title{
+    color: white;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.title h3{
+    margin-top: 0;
+}
+
+.overview{
+    position: relative;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    color: #fff;
+    max-height: 100%;
+}
+

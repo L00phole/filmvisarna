@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200&family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-family: 'Muntagu';
+}
+
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.description{
+    width: 600px;
+    color: #fff;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    position: static;
+    overflow:auto;
+}
+.movie{
+    width: 300px;
+    height: fit-content;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    position: static;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+    transition: all 1s ease-in-out;
+    object-fit: cover;
+    
+
+}
+.movie:hover .movie img{
+    transform: scale(1.2);
+}
+
+.title{
+    color: white;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.title h3{
+    margin-top: 0;
+}
+
+.overview{
+    
+    color: #fff;
+    padding: 10%;
+    font-size: 14px;
+    position: static;
+    top: 0;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.movie:hover .overview{
+    transform: scale(1.2);  
+    max-height: 100px;
+    opacity: 1;  
+}
