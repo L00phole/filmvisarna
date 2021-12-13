@@ -1,0 +1,466 @@
+/* 
+#443726 brun färg
+#1a150e mörk färg
+#eae9e8 grå
+
+
+color palette!
+--bistre: #433424;
+--gallery: #eeeeee;
+--night-rider: #100c08;
+--zorba: #a49c94;
+--makara: #837c71;
+--star-dust: #9c9c97;
+--chicago: #605f5d;
+--dusty-gray: #949494;
+--ironside-gray: #6c6c66;
+
+
+*/
+
+body{
+    margin: 0;
+    background-color: black;
+    color: aliceblue;
+}
+
+    #navigation{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+    }
+ 
+main{
+    background-color: black;
+    color: aliceblue;
+}
+header{
+    border-bottom:solid 1px aliceblue;
+   
+   background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
+    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
+}
+.nav-list {
+float:left;
+margin: 0;
+padding: 0;
+
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 50px;
+    
+    
+}
+nav li{
+    display: inline-block;
+    margin-right: 170px;
+    padding-top: 8px;
+
+    position: relative;
+    
+}
+.nav-list a{
+    color: rgb(199, 199,199);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-list a:hover{
+    color:#b1a436;}
+    
+
+.nav-list a:hover ::before{
+    width: 100%;
+
+}
+header ::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+    max-width: 8%;
+    height: auto;
+    float: left;
+    padding-top: 7px;
+   
+}
+
+#showSchedule{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    width: 12%;
+}
+
+#dateSelect{
+    font-size: 14px;
+    padding: 2px;
+    margin-bottom: 2px;
+    background-color: rgb(46, 45, 45);
+    color: aliceblue;
+}
+
+#movieTitle{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#showInfo{
+    right: 1200px;
+    max-width: 300px;
+    position: absolute;
+}
+
+#movies{
+    text-align: center;
+    width: 85%;
+    align-items: center;
+
+}
+
+.filmScheduleDiv{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.filmScheduleSpan{
+    align-items: center;
+    margin: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+.showDataDiv{
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#Finch{
+    width: 296.5px;
+    height: auto;
+}
+
+.about-movie-poster{
+    position: static; /* ändrad från absolute till static */
+    margin: 50px;
+    top: 700px;
+    left: 200px;
+}
+
+.movie-trailer{
+    height: 600px;
+    width: 100%;
+    position:static;
+    top: 30px;
+}
+
+.movie-title{
+    position: absolute;
+    top: 1050px;
+    left: 510px;
+}
+.movie-trailer-container{
+    max-width: 100%;
+    height: 500px;
+}
+
+.movie-description-container{
+    position: relative;
+    left: 700px;
+    top: 300px;
+    max-width: 25%;
+    height: 400px;
+}
+
+.container{
+     width: 85%;
+     position: static;
+     top: 50px;
+     left: 50px;
+ }
+ 
+ .container .image img{
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+     border-radius: 15px;
+
+ }
+ 
+ .container .button{
+     position: inherit;
+     top: 60%;
+     left: 5px;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .container .button a{
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     line-height: 40px;
+     vertical-align: middle;
+     align-items: center;
+     cursor:pointer;
+     color: white;
+     background: rgba(0, 0, 0, 0.8);
+     font-size: 20px;
+ }
+
+
+ /*
+ *  Style for customer category selection components
+ */
+
+#showMain{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 auto;
+}
+
+#showInfo{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#customerCategorySelection{
+    margin-top: 100px;
+}
+
+#customerCategoryH{
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.customerCategoryDiv{
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: 300px;
+}
+
+.customerCategoryP{
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.customerCategorySpanTop{
+    float: right;
+}
+
+.customerCategorySub{
+    display: inline-block;
+    margin-right: 15px;
+    border: solid 1px;
+    border-radius: 6px;
+    width: 25px;
+    text-align: center;
+    background-color:#433424;
+}
+
+.customerCategorySub:hover{
+    cursor: pointer;
+    background-color: #949494;
+}
+
+.customerCategoryAdd{
+    display: inline-block;
+    margin-left: 15px;
+    border: solid 1px;
+    border-radius: 6px;
+    width: 25px;
+    text-align: center;
+    background-color: #433424;
+}
+
+.customerCategoryAdd:hover{
+    cursor: pointer;
+    background-color: #949494;
+}
+
+#auditoriumContainer{
+    margin-top: 100px;
+    text-align: center;
+}
+
+#seatsToSelect{
+    margin: 20px;
+}
+
+.row{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.seat{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: #eae9e8;
+}
+
+.seatOccupied{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: darkred;
+}
+
+.seatSelected{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(70, 39, 39);
+}
+
+div#bottom {
+border-top: 1px solid aliceblue;
+}
+ div#bottom a{
+color: aliceblue;
+}
+div#bottom {
+width: 100%;
+min-width: 1140px;
+font-size: 16px;
+letter-spacing: 1px;
+padding-top: 8px;
+padding-bottom: 20px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+height: 40px;
+clear: both;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.dropdown {
+position: relative;
+margin-top: 50px;
+margin-right: 30px;
+margin-left: 150px;
+}
+
+.dropdown__content {
+display: none;
+left: 0;
+paddingtop: 4px;
+position: absolute;
+top: 100%;
+background-color: rgb(0, 0, 0);
+zindex: 9999;
+height: 150px;
+width: 400px;
+}
+
+.dropdown:hover .dropdown__content {
+display: block;
+}
+
+.container__block {
+
+   align-items: start;
+   display: flex;
+   margin-left: 16px;
+}
+
+.container__media {
+margin-top: 50px;
+margin-right: 16px;
+margin-left: 16px;
+
+width: 400px;
+}
+
+.container__content {
+
+flex: 0.85;
+}
+
+.posterSize {
+    align-items: start;
+    display: fixed;
+    max-width: 200px;
+    max-height: auto;
+    
+}
+
+.content-container{
+padding:30px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:16px;
+font-weight:300;
+line-height:24px;
+}
+.content-container p{
+margin-bottom:15px;
+text-align: justify;
+}
+.image{
+width:450px;
+position:static;
+box-shadow:0 0 5px rgba(0,0,0,.4);
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.image img{
+width:100%;
+height:auto;
+transform:scale(1) rotate3d(5deg);
+transition: transform .5s;
+}
+
+.image:hover img{
+ -ms-transform: scale(1.3); 
+-webkit-transform: scale(1.3); 
+ transform: scale(1.3) rotate(-10deg); 
+}
+
+.image.right{
+float:right;
+margin-left:20px;
+}
+
+.image.left{
+margin-top: 150px;
+float:left;
+margin-right:20px;
+}
+
+.text{
+    margin-top: 150px;
+}
