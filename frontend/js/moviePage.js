@@ -60,7 +60,7 @@ function renderSpecificDescription() {
   document.querySelector('.movie-description-container').innerHTML =
     movie.map(function (movie) {
       return `
-      <img src="${movie.images}" alt="${movie.title} poster">
+      <img src="/frontend${movie.images}" alt="${movie.title} poster">
       <p><br> ${movie.id} </p>
       <p><br> ${movie.actors} </p>
       <p> ${movie.description} </p>
