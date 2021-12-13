@@ -28,7 +28,7 @@
     ],
     "shortDescription": "Fjärde filmen i The Matrix-franchisen.",
     "description": "<p>Tjugo år efter händelserna i The Matrix Revolutions lever Neo ett till synes vanligt liv som Thomas A. Anderson i San Francisco där hans terapeut skriver ut blåa piller till honom.</p><p>Varken han eller Trinity känner igen varandra. Men Morpheus erbjuder honom det röda pillret och öppnar hans sinne för Matrix-världen igen.</p>",
-    "images": "/frontend/images/The-Matrix-Resurrections.png",
+    "images": "/images/The-Matrix-Resurrections.png",
     "youtubeTrailers": [
       "https://www.youtube.com/embed/9ix7TUGVYIo"
     ],
@@ -83,7 +83,7 @@
     ],
     "shortDescription": "<p>Marvels senaste mästerverk i MCU.</p>",
     "description": "<p>Eternals är en grupp superhjältar som har skyddat Jorden sedan tidernas begynnelse.<br>När monstruösa fiender, sedan länge bortglömda, plötsligt återvänder tvingas Eternals återförenas för att ännu en gång försvara mänskligheten.</p>",
-    "images": "/frontend/images/Eternals.png",
+    "images": "/images/Eternals.png",
     "youtubeTrailers": [
       "https://www.youtube.com/embed/x_me3xsvDgk"
     ],
@@ -139,7 +139,7 @@
     ],
     "shortDescription": "<p>Nytolkning av Frank Herberts gamla sci-fi klassiker är berörande och skrämmande.</p>",
     "description": "<p>Paul Atreides, en briljant och talangfull ung man född med ett storslaget öde, måste resa till den farligaste planeten i universum för att säkra sin familjs och sitt folks framtid.</p><p>När illasinnade krafter kastas in i en konflikt över tillgången på planetens mest värdefulla råvara – ett ämne med förmåga att låsa upp mänsklighetens fulla potential – kommer bara de som övervinner sina rädslor att överleva.</p>",
-    "images": "/frontend/images/Dune.jpg",
+    "images": "/images/Dune.jpg",
     "youtubeTrailers": [
       "https://www.youtube.com/embed/8g18jFHCLXk"
     ],
@@ -191,7 +191,7 @@
     ],
     "shortDescription": "<p>En Interpol-agent spårar världens mest eftersökta konsttjuv.</p>",
     "description": "<p>Specialagent John Hartley, en kriminell profiler för FBI, får i uppdrag att hjälpa Interpol Agenten Urvashi Das att utreda stölden av ett av äggen som hålls utställd på Museo Nazionale di Castel Sant'Angelo i Rom.</p><p>Han fastställer att ägget som visas är en förfalskning och att det riktiga ägget har blivit stulet, så Das har låst rummet. Men innan rummet stängs, lyckas den internationella konsttjuven Nolan Booth fly, förföljd av Hartley.</p>",
-    "images": "/frontend/images/Red-Notice.png",
+    "images": "/images/Red-Notice.png",
     "youtubeTrailers": [
       "https://www.youtube.com/embed/Pj0wz7zu3Ms"
     ],
@@ -244,7 +244,7 @@
     ],
     "shortDescription": "<p>En berättelse om livet, kärleken, vänskap och vad det betyder att vara människa.</p>",
     "description": "<p>Finch (Tom Hanks) är en man som ger sig ut på en rörande och kraftfull resa för att hitta ett nytt hem för sin osannolika familj – hans älskade hund och en nyskapad robot– i en farlig och härjad värld.</p><p></p>",
-    "images": "/frontend/images/Finch.png",
+    "images": "/images/Finch.png",
     "youtubeTrailers": [
       "https://www.youtube.com/embed/-0bYWnP3jH4"
     ],
