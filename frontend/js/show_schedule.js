@@ -90,26 +90,9 @@ async function createShowSchedule(weeks) {
     populateShowSchedule();
 }
 
-// A function that populates a component that displays a show schedule
-function populateShowSchedule() {
-    // Gets the unique dates from the 'date' field of data['shows']
-    let dates = new Set(data['shows'].map(data => data.date));
-
-    // The container component for dates
-    let dateContainer = document.getElementById('dateSelect');
-    // Iterates through the set of dates and adds an option element to the container
-    // with every date
-    for (let date of dates) {
-        let option = document.createElement('option', date);
-        option.innerHTML = date;
-        dateContainer.appendChild(option);
-    }
-}
-
-// Function reacting on changes of the dateSelect component
-$('#dateSelect').on('change', function () {
+const showSelectedDateSchedule = (value) => {
     // Finds the shows with selected date
-    let shows = data['shows'].filter(show => show.date == this.value);
+    let shows = data['shows'].filter(show => show.date == value);
 
     // Containers to store info about the shows
     let showInfoContainer = document.getElementById('showSchedule');
@@ -151,4 +134,29 @@ $('#dateSelect').on('change', function () {
     }
 
     showInfoContainer.appendChild(showInfo);
+};
+
+// A function that populates a component that displays a show schedule
+function populateShowSchedule() {
+    // Gets the unique dates from the 'date' field of data['shows']
+    let dates = new Set(data['shows'].map(data => data.date));
+
+    // The container component for dates
+    let dateContainer = document.getElementById('dateSelect');
+    // Iterates through the set of dates and adds an option element to the container
+    // with every date
+    for (let date of dates) {
+        let option = document.createElement('option', date);
+        option.innerHTML = date;
+        dateContainer.appendChild(option);
+    }
+
+    const value = dates.values().next().value;
+    dateContainer.value = value;
+    showSelectedDateSchedule(value);
+}
+
+// Function reacting on changes of the dateSelect component
+$('#dateSelect').on('change', (e) => {
+    showSelectedDateSchedule(e.target.value);
 });
