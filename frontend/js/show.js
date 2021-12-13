@@ -23,10 +23,6 @@ async function selectedShow(showId) {
     let auditoriumTotalSeats = auditoriumData.seats;
 
     // Creates components to display info about the selected show
-    /*let film = document.createElement('p')
-    film.innerHTML = showInfo.film;
-    film.style.fontSize = "40px";
-    showInfoDiv.appendChild(film);*/
     movieTitle.innerHTML = showInfo.film;
 
     let auditorium = document.createElement('p')
@@ -39,8 +35,8 @@ async function selectedShow(showId) {
 
     // Gets the count of booked seats, and calculates the number of
     // available seats. Creates a component to display it.
-    let bookedSeatsCount = await getSelectedShowBookedSeats(showId);
-    availableSeatsCount = auditoriumTotalSeats - bookedSeatsCount.length;
+    let bookedSeats = await getSelectedShowBookedSeats(showId);
+    availableSeatsCount = auditoriumTotalSeats - bookedSeats.length;
     let availableSeats = document.createElement('p');
     availableSeats.innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     availableSeats.setAttribute('id', 'availableSeatsCount')
@@ -49,16 +45,11 @@ async function selectedShow(showId) {
     showInfoDiv.style.fontSize = "25px";
 
     // Call function to render auditorium
-    renderAuditorium(auditoriumData);
+    renderAuditorium(auditoriumData, bookedSeats);
 }
 
 // Renders auditorium and sets classes to components
-async function renderAuditorium(auditoriumData) {
-    console.log(auditoriumData);
-    let bookings = await JSON._load('bookings.json');
-    console.log(bookings);
-    let bookedSeats = bookings.find(booked => booked.showId == auditoriumData.id);
-
+async function renderAuditorium(auditoriumData, bookedSeats) {
     // Declares a variable for the container of rows and seats
     let seats = document.getElementById('seats');
     // Runs a loop for each row in the auditorium, adds a div for each row
@@ -71,6 +62,9 @@ async function renderAuditorium(auditoriumData) {
             let seat = document.createElement('div');
             seat.setAttribute('class', 'seat');
             seat.setAttribute('id', `seat_${i}_${j}`);
+            if (bookedSeats.includes(`seat_${i}_${j}`)) {
+                seat.setAttribute('class', 'seatOccupied')
+            }
             row.appendChild(seat);
         }
         // Adds the row to the container
