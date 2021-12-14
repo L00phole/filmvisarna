@@ -248,7 +248,7 @@ line-height:24px;
 margin-bottom:15px;
 text-align: justify;
 }
-.image{
+.content-container .image{
 width:450px;
 position:static;
 box-shadow:0 0 5px rgba(0,0,0,.4);
@@ -256,25 +256,25 @@ overflow:hidden;
 margin-bottom:10px;
 }
 
-.image img{
+.content-container .image img{
 width:100%;
 height:auto;
 transform:scale(1) rotate3d(5deg);
 transition: transform .5s;
 }
 
-.image:hover img{
+.content-container .image:hover img{
  -ms-transform: scale(1.3); 
 -webkit-transform: scale(1.3); 
  transform: scale(1.3) rotate(-10deg); 
 }
 
-.image.right{
+.content-container .image.right{
 float:right;
 margin-left:20px;
 }
 
-.image.left{
+.content-container .image.left{
 margin-top: 150px;
 float:left;
 margin-right:20px;
