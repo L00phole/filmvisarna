@@ -11,6 +11,18 @@ let seatsToSelect = 0;
 let selectedSeatsCount = 0;
 let seatsToBook = [];
 
+//declare variables to set the different prices for each age-group
+let ordPrice = 100;
+let seniorPrice = 80;
+let childPrice = 75;
+
+// declare variables for calculation of the total price
+let ordTotalPrice = 0;
+let seniorTotalPrice = 0;
+let childTotalPrice = 0;
+let totalPrice = 0;
+
+
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
     // Calls function to get data of the selected show.
@@ -207,6 +219,7 @@ $('#childCategoryAdd').click(() => {
 // Update component to display how many seats that need to be selected
 function updateSeatsToSelect() {
     document.getElementById('seatsToSelect').innerHTML = `Välj säten (${seatsToSelect})`;
+    calcPrices();
 }
 
 // Reads the show id from URLSearchParams and passes it with a call
@@ -215,3 +228,18 @@ let urlParam = new URLSearchParams(window.location.search);
 let url = new URL(window.location.href);
 let urlSearchParamsId = url.searchParams.get('id');
 selectedShow(urlSearchParamsId);
+
+async function calcPrices() {
+
+    ordTotalPrice = ordTickets * ordPrice;
+    seniorTotalPrice = seniorTickets * seniorPrice;
+    childTotalPrice = childTickets * childPrice;
+
+    totalPrice = ordTotalPrice + childTotalPrice + seniorTotalPrice;
+
+    let totalPriceContainer = document.getElementById('total-price-container');
+    console.log(totalPrice);
+    totalPriceContainer.innerHTML = totalPrice;
+
+    return totalPrice
+}
