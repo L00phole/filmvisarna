@@ -20,28 +20,26 @@ function reactOnHashChange() {
 
 let films;
 async function readJson() {
-  let rawData = await fetch('./movies.json')
+  let rawData = await fetch('/SPA/movies.json')
   films = await rawData.json();
 }
 
 // Start page
 function start() {
-  $('main').html(`
-    <h2>Start</h2>
-    <p>Welcome to us!</p>
+  $('main').html(` 
+
   `);
 }
 
 // Products page
 function products() {
   $('main').html(`
-    <h2>Films</h2>
-    <p>Our latest movies</p>
+    
   `);
   // List the films
   let html = '';
   for (let film of films) {
-    html += `<p><a href="#film-${film.id}"><h3><b>${film.title}<b/></h3>${film.shortDescription}<br></a></p>`
+    html += `<div class="movie"><p><a href="#film-${film.id}"><h3><img id="Dune" src="${film.images}" alt="" width="200px" height="auto" ><br><b>${film.title}<b/></h3>${film.shortDescription}<br></a></p></div>`
   }
   $('main').append(html);
 }
@@ -52,7 +50,7 @@ function aboutus() {
     <div id="navigation"></div>
   <div class="content-container">
     <div class="image right">
-       <img src="./frontend/images/filmvisarna.jpg" alt="image of grand entré" width="300px" height="auto"/>
+       <img src="/frontend/images/filmvisarna.jpg" alt="image of grand entré" width="300px" height="auto"/>
     </div>
   <h2>Om Filmvisarna</h2>
     <p>
@@ -62,7 +60,7 @@ function aboutus() {
        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
     </p>
     <div class="image left">
-       <img src="./frontend/images/filmvisarna1.jpg" alt="image of cinema hall" width="300px" height="auto"/>
+       <img src="/frontend/images/filmvisarna1.jpg" alt="image of cinema hall" width="300px" height="auto"/>
     </div>
     <div class="text">
     <h4>What is Lorem Ipsum?</h4>
@@ -85,12 +83,41 @@ function film(id) {
     allowfullscreen>
   </iframe>
   
-    <img class="about-movie-poster" src="${film.images}" alt="${film.title}" width="500px"  heigth="auto">
+    <div class="container__block">
+  <img class="about-movie-poster" src="${film.images}" alt="${film.title}" width="350px"  heigth="auto">
 
-    <h2>${film.title}</h2>
-    <p>Speltid: ${film.length} min.</p>
-    <p>Direktör: ${film.director}<br>Medverkande: ${film.actors}</p>
-    <p>${film.description}</p>
+
+  <div class="container__media">
+
+    <div id="content">
+      <h3><b>${film.title}</B></h3><br>
+      <p><b>År: </b>${film.productionYear}</p><br>
+      <p><b>Speltid: </b>${film.length}</p><br>
+      <p><b>Genre: </b>${film.genre}</p><br>
+      <p><b>Utgivare: </b>${film.distributor}</p><br>
+      <p><b>Språk: </b>${film.language}</p><br>
+      <p><b>Undertext: </b>${film.subtitles}</p><br>
+      <p><b>Skapad av: </b>${film.director}</p><br>
+      <p><b>Skådespelare: </b>${film.actors}</p><br>
+      <p><b>Handling: </b>${film.description}</p><br>
+      <p><b>Recensioner: <em>${film.reviews[0].source}</em></b></p>
+      <p></p>
+      <p>Betyg: ${film.reviews[0].stars}/5</p>
+      <p><b><a href="${film.reviews[0].sourceLink}">Läs hela recensionen här.</a></b></p>
+    </div>
+  </div>
+  <div class="container__content dropdown">
+    <button>
+      <h><b>Boka Visning</b></h>
+    </button>
+
+
+    <div class="dropdown__content">
+      <div id="filmSchedule"></div>
+
+    </div>
+    </div>
+  </div>
 
   `);
 }
