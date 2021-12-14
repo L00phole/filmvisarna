@@ -360,11 +360,22 @@ margin-right:20px;
 
 #auditoriumContainer{
     margin-top: 100px;
+    align-items: center;
     text-align: center;
 }
 
 #seatsToSelect{
     margin: 20px;
+}
+
+#screen{
+    background-color: #fff;
+    height: 70px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
 }
 
 .row{
@@ -466,4 +477,3 @@ width: 400px;
 
 flex: 0.85;
 }
-
