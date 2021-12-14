@@ -100,10 +100,19 @@ function film(id) {
       <p><b>Skapad av: </b>${film.director}</p><br>
       <p><b>Skådespelare: </b>${film.actors}</p><br>
       <p><b>Handling: </b>${film.description}</p><br>
-      <p><b>Recensioner: <em>${film.reviews[0].source}</em></b></p>
+      <p><b>Recensioner: </b></p>
+      <p><b><em>${film.reviews[0].source}</em></b></p>
       <p></p>
       <p>Betyg: ${film.reviews[0].stars}/5</p>
-      <p><b><a href="${film.reviews[0].sourceLink}">Läs hela recensionen här.</a></b></p>
+      <p><b><a href="${film.reviews[0].sourceLink}">Läs hela recensionen här.</a></b></p><br>
+      <p><b><em>${film.reviews[1].source}</em></b></p>
+      <p></p>
+      <p>Betyg: ${film.reviews[1].stars}/5</p>
+      <p><b><a href="${film.reviews[1].sourceLink}">Läs hela recensionen här.</a></b></p><br>
+      <p><b><em>${film.reviews[2].source}</em></b></p>
+      <p></p>
+      <p>Betyg: ${film.reviews[2].stars}/5</p>
+      <p><b><a href="${film.reviews[2].sourceLink}">Läs hela recensionen här.</a></b></p><br>
     </div>
   </div>
   <div class="container__content dropdown">
