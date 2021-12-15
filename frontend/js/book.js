@@ -51,3 +51,4 @@ function freeSeats(show, auditorium, occupiedSeats) {
   }
   return seats;
 }
+

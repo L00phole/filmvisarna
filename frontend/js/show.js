@@ -243,3 +243,10 @@ async function calcPrices() {
 
     return totalPrice
 }
+$("#btn").click(function() {
+    alert(
+    $.getJSON('/frontend/json/bookings.json', function(booking) {
+       $('#confirm-btn').html(booking.getJSON);
+       console.log(seatsToBook);
+    }));
+  });

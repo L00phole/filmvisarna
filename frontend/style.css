@@ -475,3 +475,17 @@ width: 400px;
 
 flex: 0.85;
 }
+
+/* Styling for conformation button*/
+
+#confirm-btn #btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#fff;
+    background-color: rgba(211, 211, 211, 0.281);
+}
+#confirm-btn #btn:hover{
+    background-color:  #9c9c97;
+}
