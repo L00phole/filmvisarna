@@ -9,6 +9,19 @@ let childTickets = 0;
 let availableSeatsCount = 0;
 let seatsToSelect = 0;
 let selectedSeatsCount = 0;
+let seatsToBook = [];
+
+//declare variables to set the different prices for each age-group
+let ordPrice = 100;
+let seniorPrice = 80;
+let childPrice = 75;
+
+// declare variables for calculation of the total price
+let ordTotalPrice = 0;
+let seniorTotalPrice = 0;
+let childTotalPrice = 0;
+let totalPrice = 0;
+
 
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
@@ -35,8 +48,8 @@ async function selectedShow(showId) {
 
     // Gets the count of booked seats, and calculates the number of
     // available seats. Creates a component to display it.
-    let bookedSeats = await getSelectedShowBookedSeats(showId);
-    availableSeatsCount = auditoriumTotalSeats - bookedSeats.length;
+    let occupiedSeats = await getSelectedShowOccupiedSeats(showId);
+    availableSeatsCount = auditoriumTotalSeats - occupiedSeats.length;
     let availableSeats = document.createElement('p');
     availableSeats.innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
     availableSeats.setAttribute('id', 'availableSeatsCount')
@@ -44,31 +57,36 @@ async function selectedShow(showId) {
 
     showInfoDiv.style.fontSize = "25px";
 
+    let seats = freeSeats(showInfo, auditoriumData, occupiedSeats);
+
     // Call function to render auditorium
-    renderAuditorium(auditoriumData, bookedSeats);
+    renderAuditorium(seats);
 }
 
 // Renders auditorium and sets classes to components
-async function renderAuditorium(auditoriumData, bookedSeats) {
+// async function renderAuditorium(auditoriumData, bookedSeats) {
+async function renderAuditorium(seats) {
     // Declares a variable for the container of rows and seats
-    let seats = document.getElementById('seats');
-    // Runs a loop for each row in the auditorium, adds a div for each row
-    for (let i = 0; i < auditoriumData.seatsPerRow.length; i++) {
+    let seatsDiv = document.getElementById('seats');
+    // Runs a loop for each row, adds a div for each row
+    for (let seatsRow of seats) {
         let row = document.createElement('div');
         row.setAttribute('class', 'row')
-        // Nested loop that runs as many times as there are seats in the row,
+        // Runs a nested loop for each seat in the row,
         // adds a div for each seat
-        for (let j = 0; j < auditoriumData.seatsPerRow[i]; j++) {
-            let seat = document.createElement('div');
-            seat.setAttribute('class', 'seat');
-            seat.setAttribute('id', `seat_${i}_${j}`);
-            if (bookedSeats.includes(`seat_${i}_${j}`)) {
-                seat.setAttribute('class', 'seatOccupied')
+        for (let seat of seatsRow) {
+            let seatDiv = document.createElement('div');
+            seatDiv.setAttribute('class', 'seat');
+            if (seat == 'x') {
+                seatDiv.setAttribute('class', 'seatOccupied');
             }
-            row.appendChild(seat);
+            else {
+                seatDiv.setAttribute('id', seat);
+            }
+            row.appendChild(seatDiv);
         }
         // Adds the row to the container
-        seats.appendChild(row);
+        seatsDiv.appendChild(row);
     }
 
     // Add events to select and deselect seats
@@ -80,11 +98,13 @@ async function renderAuditorium(auditoriumData, bookedSeats) {
             $(this).addClass('seatSelected');
             selectedSeatsCount += 1;
             seatsToSelect -= 1;
+            seatsToBook.push(this.id);
         }
         else {
             $(this).removeClass('seatSelected');
             selectedSeatsCount -= 1;
             seatsToSelect += 1;
+            seatsToBook.splice(seatsToBook.indexOf(this.id));
         }
         updateSeatsToSelect();
     });
@@ -99,8 +119,9 @@ async function getSelectedShowData(showId) {
 }
 
 // Returns an array with the booked seats for the show with the given show id
-async function getSelectedShowBookedSeats(showId) {
+async function getSelectedShowOccupiedSeats(showId) {
     bookings = await JSON._load('bookings.json');
+    //return bookings;
     let bookingsInfo = bookings.filter(booking => booking.showId == showId);
 
     let bookedSeats = [];
@@ -198,6 +219,7 @@ $('#childCategoryAdd').click(() => {
 // Update component to display how many seats that need to be selected
 function updateSeatsToSelect() {
     document.getElementById('seatsToSelect').innerHTML = `Välj säten (${seatsToSelect})`;
+    calcPrices();
 }
 
 // Reads the show id from URLSearchParams and passes it with a call
@@ -206,3 +228,25 @@ let urlParam = new URLSearchParams(window.location.search);
 let url = new URL(window.location.href);
 let urlSearchParamsId = url.searchParams.get('id');
 selectedShow(urlSearchParamsId);
+
+async function calcPrices() {
+
+    ordTotalPrice = ordTickets * ordPrice;
+    seniorTotalPrice = seniorTickets * seniorPrice;
+    childTotalPrice = childTickets * childPrice;
+
+    totalPrice = ordTotalPrice + childTotalPrice + seniorTotalPrice;
+
+    let totalPriceContainer = document.getElementById('total-price-container');
+    console.log(totalPrice);
+    totalPriceContainer.innerHTML = totalPrice;
+
+    return totalPrice
+}
+$("#btn").click(function() {
+    alert(
+    $.getJSON('/frontend/json/bookings.json', function(booking) {
+       $('#confirm-btn').html(booking.getJSON);
+       console.log(seatsToBook);
+    }));
+  });

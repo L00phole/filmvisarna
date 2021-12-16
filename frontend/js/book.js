@@ -38,28 +38,8 @@ async function book(showId, seats) {
 }
 
 // Find all free seats for a show
-function freeSeats(showId) {
-  // Find the show
-  let show = findById('shows', showId);
-  if (!show) { return 'Show does not exist!'; }
-
-  // Find the auditorium
-  let auditorium = data.auditoriums.find(x => x.name = show.auditorium);
-  if (!auditorium) { return 'Invalid auditorium in show data!'; }
-
-  // Loop through all bookings to get occupied seats
-  let occupiedSeats = [];
-  for (let booking of data.bookings) {
-    // If it is not the same show then do nothing
-    if (booking.showId != showId) { continue; }
-    // Add the seats as occupied
-    occupiedSeats.push(...booking.seats);
-  }
-
+function freeSeats(show, auditorium, occupiedSeats) {
   // Build an array with all seats in the auditorium
-  // skapa html element av rows + seats
-  // skapa en klass för upptagna säten(occupiedSeats), och en klass för lediga 
-  // säten(availableSeats), klasserna 
   let seats = [], seatNumber = 1;
   for (seatsInARow of auditorium.seatsPerRow) {
     let row = [];
@@ -69,6 +49,6 @@ function freeSeats(showId) {
       seatNumber++;
     }
   }
-
   return seats;
 }
+
