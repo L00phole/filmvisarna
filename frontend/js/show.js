@@ -1,3 +1,5 @@
+
+
 // Declare variables to hold data for ticket counts
 let ordTickets = 0;
 let seniorTickets = 0;
@@ -10,6 +12,7 @@ let availableSeatsCount = 0;
 let seatsToSelect = 0;
 let selectedSeatsCount = 0;
 let seatsToBook = [];
+let showInfo = {};
 
 //declare variables to set the different prices for each age-group
 let ordPrice = 100;
@@ -113,7 +116,7 @@ async function renderAuditorium(seats) {
 // Returns data from the show with the given id
 async function getSelectedShowData(showId) {
     showData = await JSON._load('shows.json');
-    let showInfo = showData.find(show => show.id == showId);
+    showInfo = showData.find(show => show.id == showId);
 
     return showInfo;
 }
@@ -123,7 +126,6 @@ async function getSelectedShowOccupiedSeats(showId) {
     bookings = await JSON._load('bookings.json');
     //return bookings;
     let bookingsInfo = bookings.filter(booking => booking.showId == showId);
-
     let bookedSeats = [];
     for (let bookingInfo of bookingsInfo) {
         bookedSeats = bookedSeats.concat([...bookingInfo.seats]);
@@ -243,10 +245,16 @@ async function calcPrices() {
 
     return totalPrice
 }
-$("#btn").click(function() {
-    alert(
-    $.getJSON('/frontend/json/bookings.json', function(booking) {
-       $('#confirm-btn').html(booking.getJSON);
-       console.log(seatsToBook);
-    }));
-  });
+
+
+    $("#btn").click(function () {
+        console.log(showInfo, seatsToBook,
+            totalPrice     
+        );
+        const infos = {showInfo, seatsToBook, totalPrice}
+
+        JSON._save('booking-conf.json', {infos});
+    });
+
+       
+        
