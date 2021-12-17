@@ -303,6 +303,7 @@ margin-right:20px;
 
 #customerCategorySelection{
     margin-top: 100px;
+    user-select: none;
 }
 
 #customerCategoryH{
@@ -362,14 +363,27 @@ margin-right:20px;
     text-align: center;
 }
 
+#seatTypes{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#seatTypes p{
+    margin: 5px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
 #seatsToSelect{
     margin: 20px;
 }
 
 #screen{
     background-color: #fff;
-    height: 120px;
-    width: 280px;
+    height: 100px;
+    width: 260px;
     margin: auto;
     margin-bottom: 15px;
     transform: rotateX(-45deg);
@@ -389,7 +403,11 @@ margin-right:20px;
     width: 20px;
     margin: 5px;
     margin-bottom: 10px;
-    background-color: #eae9e8;
+    background-color: #949494;
+}
+
+.seat:hover{
+    cursor: pointer;
 }
 
 .seatOccupied{
@@ -409,7 +427,7 @@ margin-right:20px;
     width: 20px;
     margin: 5px;
     margin-bottom: 10px;
-    background-color: rgb(70, 39, 39);
+    background-color: rgb(37, 201, 86);
 }
 
 div#bottom {
