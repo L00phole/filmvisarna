@@ -1,0 +1,16 @@
+{
+  "infos": {
+    "showInfo": {
+      "id": 1,
+      "auditorium": "Lilla Salongen",
+      "film": "Matrix Resurrections",
+      "date": "2021-12-22",
+      "time": "18:00"
+    },
+    "seatsToBook": [
+      "46",
+      "47"
+    ],
+    "totalPrice": 180
+  }
+}
