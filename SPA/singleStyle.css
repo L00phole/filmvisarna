@@ -19,8 +19,11 @@ color palette!
 */
 
 body{
+    display:flex; 
+    flex-direction:column;
     margin: 0;
-    background-color: black;
+    background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
+    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
     color: aliceblue;
 }
 
@@ -31,7 +34,8 @@ body{
     }
  
 main{
-    background-color: black;
+    size: relative;
+    background-color: transparent;
     color: aliceblue;
 }
 header{
@@ -40,6 +44,17 @@ header{
    background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
     #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
 }
+body > footer {
+   display: table-row;
+}
+footer{
+    margin-top:auto;
+    position: relative;
+    height: 100px;
+    background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
+    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
+}
+
 .nav-list {
 float:left;
 margin: 0;
@@ -465,7 +480,26 @@ margin-right:20px;
     margin-top: 150px;
 }
 
-/*
-Contact form
-*/
+.firstPage{
+    object-fit: cover;
+    position: center;
+    margin-top: 300px;
+    margin-bottom: auto;
+}
+.buttonFirstPage{
+    position: center;
+    margin: auto;
+}
 
+/*
+video background CSS
+*/
+video {  
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}

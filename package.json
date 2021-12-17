@@ -12,5 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "jsonflex": "^1.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

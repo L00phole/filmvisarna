@@ -8,7 +8,7 @@ const jsonflex = require('jsonflex')({ jsonDir: '/frontend/json' });
 app.use(jsonflex);
 
 // Tell the web server to serve files from the frontend folder
-app.use(express.static('SPA\singleIndex.html'));
+app.use(express.static('SPA'));
 
 // Start the web server at port 4000
 app.listen(4000, () => console.log('Listening on port 4000'));

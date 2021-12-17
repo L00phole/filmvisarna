@@ -27,7 +27,35 @@ async function readJson() {
 // Start page
 function start() {
   $('main').html(` 
-    <h1>Här ska första sidan vara.</h1>
+    <style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</style>
+    
+    
+    <firstpage>
+   
+        <h1>FILMVISARNA</h1>
+        <h2>Vi har de senaste filmerna.</h2>
+        <h3>Liten biograf men episka upplevelser.</h3>
+       <div class="container">
+  <div class="vertical-center">
+    <button><h2><a href="#products">Filmer</a></h2></button>
+  </div>
+</div>
+    </firstpage>
+
   `);
 }
 
@@ -74,7 +102,48 @@ function aboutus() {
 
 function bottom() {
   $('main').html(` 
-    <h1>TEST TEST</h1>
+    
+<link href="contact-form.css" rel="stylesheet">
+
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact us</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+      
+
+    </form>
+    </div>
+
+</div>
+
   `);
 }
 
