@@ -42,19 +42,7 @@ function start() {
   transform: translateY(-50%);
 }
 </style>
-    
-    
-    <firstpage>
-   
-        <h1>FILMVISARNA</h1>
-        <h2>Vi har de senaste filmerna.</h2>
-        <h3>Liten biograf men episka upplevelser.</h3>
-       <div class="container">
-  <div class="vertical-center">
-    <button><h2><a href="#products">Filmer</a></h2></button>
-  </div>
-</div>
-<section aria-label="Movies"></section>
+    <section aria-label="Movies"></section>
   <div class="carousel" data-carousel>
     <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
     <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
@@ -77,6 +65,18 @@ function start() {
     </ul>
   </div>
   </section>
+    
+    <firstpage>
+   
+        <h1>FILMVISARNA</h1>
+        <h2>Vi har de senaste filmerna.</h2>
+        <h3>Liten biograf men episka upplevelser.</h3>
+       <div class="container">
+  <div class="vertical-center">
+    <button><h2><a href="#products">Filmer</a></h2></button>
+  </div>
+</div>
+
     </firstpage>
   `);
   carousel
