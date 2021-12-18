@@ -54,9 +54,32 @@ function start() {
     <button><h2><a href="#products">Filmer</a></h2></button>
   </div>
 </div>
+<section aria-label="Movies"></section>
+  <div class="carousel" data-carousel>
+    <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+    <ul data-slides>
+      <li class="slide" data-active>
+        <img src="/frontend/images/movieSliderImages/Dune_wallpaper.jpg" alt="Dune">
+      </li>
+      <li class="slide">
+        <img src="/frontend/images/movieSliderImages/eternals_wallpaper.jpg" alt="Marvel eternals">
+      </li>
+      <li class="slide">
+        <img src="/frontend/images/movieSliderImages/finch_wallpaper.jpg" alt="Finch">
+      </li>
+      <li class="slide">
+        <img src="/frontend/images/movieSliderImages/matrixResurections_wallpaper.jpg" alt="Matrix Ressurections">
+      </li>
+      <li class="slide">
+        <img src="/frontend/images/movieSliderImages/redNotice_wallpaper.jpg" alt="Red Notice">
+      </li>
+    </ul>
+  </div>
+  </section>
     </firstpage>
-
   `);
+  carousel
 }
 
 // Products page
