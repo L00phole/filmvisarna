@@ -79,7 +79,6 @@ function start() {
 
     </firstpage>
   `);
-  carousel
 }
 
 // Products page
