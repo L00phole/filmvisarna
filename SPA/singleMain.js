@@ -225,7 +225,9 @@ function film(id) {
   </div>
 
   `);
+
 }
+
 // Listen to the hash change event
 window.onhashchange = reactOnHashChange;
 // And also call reactOnHashChange on initial page load
