@@ -5,7 +5,7 @@ let routes = {
         let partial = await (await fetch('/partials/start.html')).text();
         document.querySelector('main').innerHTML = partial;
         populateShowSchedule();
-        displayimg(images);
+        carousel();
     },
 
     // Movies page route

@@ -3,22 +3,23 @@
 async function book(showId, seats) {
   showId = parseInt(showId);
   seats = seats.map(x => parseInt(x));
+  console.log(seats);
+  console.log(showId);
 
   // Create a new booking
   let booking = {
-    id: bookings.length + 1,
+    id: data['bookings'].length + 1,
     showId,
     seats
   };
 
   // Add the booking to the existing bookings
-  bookings.push(booking);
+  data['bookings'].push(booking);
 
   // Save the booking to the bookings.json file
   await JSON._save('bookings', bookings);
 
-  // Return the booking
-  return booking;
+  return booking
 }
 
 // Find all free seats for a show
