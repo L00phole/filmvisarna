@@ -38,6 +38,13 @@ header{
    background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
     #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
 }
+
+.nav-container{
+    position: -webkit-sticky; /* safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .nav-list {
 float:left;
 margin: 0;
