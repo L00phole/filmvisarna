@@ -38,6 +38,13 @@ header{
    background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
     #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
 }
+
+.nav-container{
+    position: -webkit-sticky; /* safari */
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .nav-list {
 float:left;
 margin: 0;
@@ -297,6 +304,11 @@ margin-right:20px;
     width: 100%;
 }
 
+#total-price-container{
+    position: absolute;
+    border: white;
+}
+
 #customerCategorySelection{
     margin-top: 100px;
     user-select: none;
@@ -441,7 +453,7 @@ color: aliceblue;
 }
 div#bottom {
 width: 100%;
-min-width: 1140px;
+/*min-width: 1140px;*/
 font-size: 16px;
 letter-spacing: 1px;
 padding-top: 0px;
