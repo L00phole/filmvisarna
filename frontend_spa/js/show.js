@@ -212,11 +212,11 @@ function initButtons() {
         updateSeatsToSelect();
     });
 
-    $("#btn").click(function () {
+    $("#btn").click(async function () {
         const infos = { showInfo, seatsToBook, totalPrice }
 
-        book(showInfo.id, seatsToBook);
-        JSON._save('booking-conf.json', { infos });
+        await book(showInfo.id, seatsToBook);
+        await JSON._save('booking-conf.json', { infos });
     });
 }
 
