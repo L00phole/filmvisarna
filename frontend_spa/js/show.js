@@ -25,7 +25,14 @@ let totalPrice = 0;
 
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
-    // Calls function to get data of the selected show.
+
+    // On hard pagereload showId is missing - then goto start page
+    if (!showId) {
+        //  location.replace('/');
+    }
+
+
+    // Calls function to get data of the selected show
     let showInfo = await getSelectedShowData(showId);
     let showInfoDiv = document.getElementById('showInfo');
 
@@ -36,6 +43,8 @@ async function selectedShow(showId) {
 
     // Creates components to display info about the selected show
     movieTitle.innerHTML = showInfo.film;
+
+    renderMovieImage(showId);
 
     let auditorium = document.createElement('p')
     auditorium.innerHTML = showInfo.auditorium;
@@ -111,9 +120,21 @@ async function renderAuditorium(seats) {
 
 // Returns data from the show with the given id
 async function getSelectedShowData(showId) {
+    console.log(Object.keys(data))
     showInfo = data['shows'].find(show => show.id == showId);
-
     return showInfo;
+}
+
+const getMovieData = (showId) => {
+    showInfo = data['shows'].find(show => show.id == showId);
+    return data['films'].find(film => film.title == showInfo.film);
+}
+
+const renderMovieImage = (showId) => {
+    let movieData = getMovieData(showId);
+    document.getElementById('movieImageContainer').innerHTML = `
+        <img src="${movieData.images}"></img>
+    `
 }
 
 // Returns an array with the booked seats for the show with the given show id

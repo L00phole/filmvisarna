@@ -11,6 +11,9 @@ async function readJSON() {
 
   // Calls function to create a show schedule for n(4) given weeks.
   //createShowSchedule(4);
+
+  // First show route when JSON has been loaded
+  router();
 }
 
 // A helper to find things by id (films, shows etc.)
@@ -21,8 +24,6 @@ function findById(type, id) {
 // HTML elements to display on every page
 document.getElementById('navigation').innerHTML = getNavbarHtml();
 document.getElementById('bottom').innerHTML = getFooterHtml();
-
-readJSON();
 
 let images = 1;
 
@@ -80,6 +81,16 @@ document.querySelector('body').addEventListener('click', function (event) {
 });
 
 function router() {
+  window.scrollTo(0, 0);
+
+  // use location.hash if present at hard page reload
+  if (location.hash) {
+    let param = decodeURIComponent(location.hash.slice(3));
+    param = isNaN(+param) ? param : +param;
+    routerWithParam(null, param);
+    return;
+  }
+
   let route = location.pathname;
 
   route = route === '/index.html' ? '/' : route;
@@ -91,8 +102,14 @@ function router() {
   routes[route]();
 }
 
-function routerWithParam(param) {
-  let route = location.pathname;
+function routerWithParam(route, param) {
+  window.scrollTo(0, 0);
+
+  if (route) {
+    history.pushState(null, null, route + '#p-' + encodeURIComponent(param));
+  }
+
+  route = location.pathname;
 
   route = route === '/index.html' ? '/' : route;
 
@@ -103,7 +120,8 @@ function routerWithParam(param) {
   routes[route](param);
 }
 
-router();
 
 // Call the router on navigation back/forward
 window.addEventListener('popstate', router);
+
+readJSON();

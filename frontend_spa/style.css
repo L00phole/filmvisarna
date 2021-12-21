@@ -290,12 +290,16 @@ margin-right:20px;
 }
 
  /*
- *  Style for customer category selection components
+ *  Style for show page components
  */
 
 #showMain{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0 auto;
+}
+
+#movieImageContainer{
+    text-align: center;
 }
 
 #showInfo{

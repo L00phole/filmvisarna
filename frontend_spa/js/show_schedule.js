@@ -117,10 +117,8 @@ const showSelectedDateSchedule = (value) => {
         // redirect to the clicked movies' seat booking page
         showDiv.setAttribute('id', 'showDiv_' + show.id);
         $('#showDiv_' + show.id).on("click", function () {
-            // Assigns the window location the current location and adds show.html with
-            // a show id parameter.
-            window.history.pushState(null, null, 'show');
-            routerWithParam(show.id);
+            // Call routerWithParam to change window location
+            routerWithParam('show', show.id);
         });
         // Adds mouseenter and mouseleave events with some styling functionality
         $('#showDiv_' + show.id).on("mouseenter", function () {

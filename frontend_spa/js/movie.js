@@ -41,8 +41,7 @@ function populateFilmShowSchedule(filmTitle) {
             // Add click event to to showDataDiv, the event redirects to the page
             // for the selected show.
             $('#showDataDiv_' + show.id).on("click", function () {
-                window.history.pushState(null, null, 'show');
-                routerWithParam(show.id);
+                routerWithParam('show', show.id);
             });
         }
     }

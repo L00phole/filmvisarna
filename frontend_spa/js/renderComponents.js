@@ -55,8 +55,7 @@ function renderMovieRefs(films) {
 
         // Add event listener to movie component
         movieDiv.addEventListener('click', () => {
-            window.history.pushState(null, null, 'movie');
-            routerWithParam(film.title);
+            routerWithParam('movie', film.title);
         });
 
         container.appendChild(movieDiv);
