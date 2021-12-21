@@ -3,8 +3,6 @@
 async function book(showId, seats) {
   showId = parseInt(showId);
   seats = seats.map(x => parseInt(x));
-  console.log(seats);
-  console.log(showId);
 
   // Create a new booking
   let booking = {
@@ -17,7 +15,7 @@ async function book(showId, seats) {
   data['bookings'].push(booking);
 
   // Save the booking to the bookings.json file
-  await JSON._save('bookings', bookings);
+  await JSON._save('bookings', data['bookings']);
 
   return booking
 }

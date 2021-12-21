@@ -118,6 +118,7 @@ async function getSelectedShowData(showId) {
 
 // Returns an array with the booked seats for the show with the given show id
 async function getSelectedShowOccupiedSeats(showId) {
+    console.log(data['bookings']);
     let bookingsInfo = data['bookings'].filter(booking => booking.showId == showId);
     let bookedSeats = [];
     for (let bookingInfo of bookingsInfo) {
@@ -212,11 +213,11 @@ function initButtons() {
         updateSeatsToSelect();
     });
 
-    $("#btn").click(async function () {
+    $("#btn").click(function () {
         const infos = { showInfo, seatsToBook, totalPrice }
 
-        await book(showInfo.id, seatsToBook);
-        await JSON._save('booking-conf.json', { infos });
+        book(showInfo.id, seatsToBook);
+        JSON._save('booking-conf.json', { infos });
     });
 }
 
