@@ -297,6 +297,11 @@ margin-right:20px;
     width: 100%;
 }
 
+#total-price-container{
+    position: absolute;
+    border: white;
+}
+
 #customerCategorySelection{
     margin-top: 100px;
     user-select: none;
@@ -441,7 +446,7 @@ color: aliceblue;
 }
 div#bottom {
 width: 100%;
-min-width: 1140px;
+/*min-width: 1140px;*/
 font-size: 16px;
 letter-spacing: 1px;
 padding-top: 0px;
