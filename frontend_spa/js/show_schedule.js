@@ -156,7 +156,9 @@ async function populateShowSchedule() {
     showSelectedDateSchedule(value);
 }
 
-// Function reacting on changes of the dateSelect component
-$('#dateSelect').on('change', (e) => {
-    showSelectedDateSchedule(e.target.value);
-});
+const initDateSelect = () => {
+    // Function reacting on changes of the dateSelect component
+    $('#dateSelect').on('change', (e) => {
+        showSelectedDateSchedule(e.target.value);
+    });
+}

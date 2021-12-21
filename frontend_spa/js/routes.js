@@ -6,6 +6,7 @@ let routes = {
         document.querySelector('main').innerHTML = partial;
         populateShowSchedule();
         carousel();
+        initDateSelect();
     },
 
     // Movies page route

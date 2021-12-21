@@ -118,7 +118,6 @@ async function getSelectedShowData(showId) {
 
 // Returns an array with the booked seats for the show with the given show id
 async function getSelectedShowOccupiedSeats(showId) {
-    console.log(data['bookings']);
     let bookingsInfo = data['bookings'].filter(booking => booking.showId == showId);
     let bookedSeats = [];
     for (let bookingInfo of bookingsInfo) {
