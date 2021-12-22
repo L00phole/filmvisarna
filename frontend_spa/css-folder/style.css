@@ -1,9 +1,4 @@
 /* 
-#443726 brun färg
-#1a150e mörk färg
-#eae9e8 grå
-
-
 color palette!
 --bistre: #433424;
 --gallery: #eeeeee;
@@ -33,68 +28,7 @@ main{
     background-color: black;
     color: aliceblue;
 }
-header{
-    border-bottom:solid 1px aliceblue;
-   
-   background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
-    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
-}
 
-.nav-container{
-    position: -webkit-sticky; /* safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-.nav-list {
-float:left;
-margin: 0;
-padding: 0;
-
-}
-
-nav ul {
-    list-style: none;
-    margin-left: 50px;
-    
-    
-}
-nav li{
-    display: inline-block;
-    margin-right: 170px;
-    padding-top: 8px;
-
-    position: relative;
-    
-}
-.nav-list a{
-    color: rgb(199, 199,199);
-    text-decoration: none;
-    text-transform: capitalize;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-.nav-list a:hover{
-    color:#b1a436;}
-    
-
-.nav-list a:hover ::before{
-    width: 100%;
-
-}
-header ::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-.logo {
-    max-width: 8%;
-    height: auto;
-    float: left;
-    padding-top: 7px;
-   
-}
 
 #showSchedule {
     display: flex;
@@ -218,7 +152,7 @@ header ::after{
     top: 630px;
 }
 
-/*Style for the slideshow*/
+/*Style for the slideshow
 
 .container{
      width: 85%;
@@ -255,55 +189,8 @@ header ::after{
      color: white;
      background: rgba(0, 0, 0, 0.8);
      font-size: 20px;
- }
+ }*/
 
-/*Style for about page*/
-.content-container{
-padding:30px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size:16px;
-font-weight:300;
-line-height:24px;
-}
-.content-container p{
-margin-bottom:15px;
-text-align: justify;
-}
-.content-container .image{
-width:450px;
-position:static;
-box-shadow:0 0 5px rgba(0,0,0,.4);
-overflow:hidden;
-margin-bottom:10px;
-}
-
-.content-container .image img{
-width:100%;
-height:auto;
-transform:scale(1) rotate3d(5deg);
-transition: transform .5s;
-}
-
-.content-container .image:hover img{
- -ms-transform: scale(1.3); 
--webkit-transform: scale(1.3); 
- transform: scale(1.3) rotate(-10deg); 
-}
-
-.content-container .image.right{
-float:right;
-margin-left:20px;
-}
-
-.content-container .image.left{
-margin-top: 150px;
-float:left;
-margin-right:20px;
-}
-
-.text{
-    margin-top: 150px;
-}
 
  /*
  *  Style for show page components
