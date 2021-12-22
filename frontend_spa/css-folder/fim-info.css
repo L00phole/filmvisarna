@@ -144,6 +144,11 @@ margin-left: 16px;
 
 width: 400px;
 }
+#content{
+ font-family: 'Lora', serif;
+ font-size: 16px;
+ line-height: 1.5;
+}
 
 .container__content {
 
