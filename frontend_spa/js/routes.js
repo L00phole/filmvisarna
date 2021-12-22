@@ -37,6 +37,12 @@ let routes = {
         selectedShow(showId);
         initButtons();
         resetTickets();
+    },
+
+     // Contact us page route
+    async contactUs() {
+        let partial = await (await fetch('/partials/contact.html')).text();
+        document.querySelector('main').innerHTML = partial;
     }
 
 }

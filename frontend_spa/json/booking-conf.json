@@ -1,0 +1,18 @@
+{
+  "infos": {
+    "showInfo": {
+      "id": 2,
+      "auditorium": "Stora Salongen",
+      "film": "Eternals",
+      "date": "2021-12-22",
+      "time": "18:00"
+    },
+    "seatsToBook": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "totalPrice": 355
+  }
+}
