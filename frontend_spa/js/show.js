@@ -23,17 +23,6 @@ let seniorTotalPrice = 0;
 let childTotalPrice = 0;
 let totalPrice = 0;
 
-// Function that resets the values for ticket and seat counter variables
-const resetTickets = () => {
-    ordTickets = 0;
-    seniorTickets = 0;
-    childTickets = 0;
-    availableSeatsCount = 0;
-    seatsToSelect = 0;
-    selectedSeatsCount = 0;
-    seatsToBook = [];
-}
-
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
     // Calls function to get data of the selected show
@@ -85,7 +74,7 @@ async function renderAuditorium(seats) {
         let row = document.createElement('div');
         row.setAttribute('class', 'row')
         // Runs a nested loop for each seat in the row,
-        // adds a div for each seat
+        // adds a div for each seat 
         for (let seat of seatsRow) {
             let seatDiv = document.createElement('div');
             seatDiv.setAttribute('class', 'seat');
@@ -247,6 +236,7 @@ function initButtons() {
 // Update component to display how many seats that need to be selected
 function updateSeatsToSelect() {
     document.getElementById('seatsToSelect').innerHTML = `Välj säten (${seatsToSelect})`;
+    setLocalStorage();
     calcPrices();
 }
 
@@ -262,4 +252,75 @@ async function calcPrices() {
     totalPriceContainer.innerHTML = `Pris: ${totalPrice}:-`;
 
     return totalPrice
+}
+
+// Function that resets the values for ticket and seat counter variables
+const resetTickets = () => {
+    if (localStorage.getItem('ordTickets') === null) {
+        ordTickets = 0;
+    }
+    else {
+        ordTickets = parseInt(window.localStorage.getItem('ordTickets'));
+        document.getElementById('ordCategoryCount').innerHTML = ordTickets;
+    }
+    if (localStorage.getItem('seniorTickets') === null) {
+        seniorTickets = 0;
+    }
+    else {
+        childTickets = parseInt(window.localStorage.getItem('seniorTickets'));
+        document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
+    }
+    if (localStorage.getItem('childTickets') === null) {
+        childTickets = 0;
+    }
+    else {
+        childTickets = parseInt(window.localStorage.getItem('childTickets'));
+        document.getElementById('childCategoryCount').innerHTML = childTickets;
+    }
+    if (localStorage.getItem('availableSeatsCount') === null) {
+        availableSeatsCount = 0;
+    }
+    else {
+        availableSeatsCount = parseInt(window.localStorage.getItem('availableSeatsCount'));
+        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
+    }
+    if (localStorage.getItem('seatsToSelect') === null) {
+        seatsToSelect = 0;
+    }
+    else {
+        seatsToSelect = parseInt(localStorage.getItem('seatsToSelect'));
+    }
+    if (localStorage.getItem('selectedSeatsCount') === null) {
+        selectedSeatsCount = 0;
+    }
+    else {
+        selectedSeatsCount = parseInt(localStorage.getItem('selectedSeatsCount'));
+    }
+    if (localStorage.getItem('seatsToBook') === null) {
+        seatsToBook = [];
+    }
+    else {
+        seatsToBook = localStorage.getItem('seatsToBook').split(',');
+    }
+
+    console.log(ordTickets);
+    console.log(seniorTickets);
+    console.log(childTickets);
+    console.log(availableSeatsCount);
+    console.log(seatsToSelect);
+    console.log(selectedSeatsCount);
+    console.log(seatsToBook);
+
+    updateSeatsToSelect();
+
+    window.localStorage.clear();
+}
+
+const setLocalStorage = () => {
+    window.localStorage.setItem('seatsToBook', seatsToBook);
+    window.localStorage.setItem('ordTickets', parseInt(ordTickets));
+    window.localStorage.setItem('seniorTickets', parseInt(seniorTickets));
+    window.localStorage.setItem('childTickets', parseInt(childTickets));
+    window.localStorage.setItem('seatsToSelect', parseInt(seatsToSelect));
+    window.localStorage.setItem('selectedSeatsCount', parseInt(selectedSeatsCount));
 }
