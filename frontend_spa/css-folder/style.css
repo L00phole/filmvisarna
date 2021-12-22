@@ -1,9 +1,4 @@
 /* 
-#443726 brun färg
-#1a150e mörk färg
-#eae9e8 grå
-
-
 color palette!
 --bistre: #433424;
 --gallery: #eeeeee;
@@ -32,68 +27,7 @@ main{
     background-color: black;
     color: aliceblue;
 }
-header{
-    border-bottom:solid 1px aliceblue;
-   
-   background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
-    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
-}
 
-.nav-container{
-    position: -webkit-sticky; /* safari */
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-.nav-list {
-float:left;
-margin: 0;
-padding: 0;
-
-}
-
-nav ul {
-    list-style: none;
-    margin-left: 50px;
-    
-    
-}
-nav li{
-    display: inline-block;
-    margin-right: 170px;
-    padding-top: 8px;
-
-    position: relative;
-    
-}
-.nav-list a{
-    color: rgb(199, 199,199);
-    text-decoration: none;
-    text-transform: capitalize;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    font-weight: bold;
-}
-.nav-list a:hover{
-    color:#b1a436;}
-    
-
-.nav-list a:hover ::before{
-    width: 100%;
-
-}
-header ::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-.logo {
-    max-width: 8%;
-    height: auto;
-    float: left;
-    padding-top: 7px;
-   
-}
 
 #showSchedule{
     float: right;
@@ -164,12 +98,7 @@ header ::after{
     height: auto;
 }
 
-.about-movie-poster{
-    position: static; /* ändrad från absolute till static */
-    margin: 50px;
-    top: 700px;
-    left: 200px;
-}
+
 
 .movie-trailer{
     height: 600px;
@@ -202,7 +131,7 @@ header ::after{
     top: 630px;
 }
 
-/*Style for the slideshow*/
+/*Style for the slideshow
 
 .container{
      width: 85%;
@@ -239,55 +168,8 @@ header ::after{
      color: white;
      background: rgba(0, 0, 0, 0.8);
      font-size: 20px;
- }
+ }*/
 
-/*Style for about page*/
-.content-container{
-padding:30px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size:16px;
-font-weight:300;
-line-height:24px;
-}
-.content-container p{
-margin-bottom:15px;
-text-align: justify;
-}
-.content-container .image{
-width:450px;
-position:static;
-box-shadow:0 0 5px rgba(0,0,0,.4);
-overflow:hidden;
-margin-bottom:10px;
-}
-
-.content-container .image img{
-width:100%;
-height:auto;
-transform:scale(1) rotate3d(5deg);
-transition: transform .5s;
-}
-
-.content-container .image:hover img{
- -ms-transform: scale(1.3); 
--webkit-transform: scale(1.3); 
- transform: scale(1.3) rotate(-10deg); 
-}
-
-.content-container .image.right{
-float:right;
-margin-left:20px;
-}
-
-.content-container .image.left{
-margin-top: 150px;
-float:left;
-margin-right:20px;
-}
-
-.text{
-    margin-top: 150px;
-}
 
  /*
  *  Style for show page components
@@ -447,70 +329,6 @@ margin-right:20px;
     margin: 5px;
     margin-bottom: 10px;
     background-color: rgb(37, 201, 86);
-}
-
-div#bottom {
-border-top: 1px solid aliceblue;
-}
- div#bottom a{
-color: aliceblue;
-}
-div#bottom {
-width: 100%;
-/*min-width: 1140px;*/
-font-size: 16px;
-letter-spacing: 1px;
-padding-top: 0px;
-padding-bottom: 60px;
-position: relative;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-height: 40px;
-clear: both;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.dropdown {
-position: relative;
-margin-top: 50px;
-margin-right: 30px;
-margin-left: 150px;
-}
-
-.dropdown__content {
-display: none;
-left: 0;
-padding-top: 4px;
-position: absolute;
-top: 100%;
-background-color: rgb(0, 0, 0);
-z-index: 9999;
-height: 150px;
-width: 400px;
-}
-
-.dropdown:hover .dropdown__content {
-display: block;
-}
-
-.container__block {
-
-   align-items: start;
-   display: flex;
-   margin-left: 16px;
-}
-
-.container__media {
-margin-top: 50px;
-margin-right: 16px;
-margin-left: 16px;
-
-width: 400px;
-}
-
-.container__content {
-
-flex: 0.85;
 }
 
 /* Styling for conformation button*/

@@ -92,7 +92,7 @@ function renderMovieDescription(title) {
         </div>
 
         <div class="container__content dropdown">
-            <button>
+            <button class="showschedule-button">
             <h><b>Boka Visning</b></h>
             </button>
 

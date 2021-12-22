@@ -1,0 +1,99 @@
+/* 
+font-family: 'Lora', serif;
+font-family: 'Work Sans', sans-serif;
+
+color palette!
+--bistre: #433424;
+--gallery: #eeeeee;
+--night-rider: #100c08;
+--zorba: #a49c94;
+--makara: #837c71;
+--star-dust: #9c9c97;
+--chicago: #605f5d;
+--dusty-gray: #949494;
+--ironside-gray: #6c6c66;
+*/
+
+/*
+new color scheme
+#d2ceca;
+#3c2f20;
+#282421;
+#bfbab4;
+#edebea;
+#bfbfbe;
+*/
+
+
+.about-us-title{
+ font-family: 'Work Sans', sans-serif;
+ font-weight: 900;
+ color: #bfbab4;
+ font-size: 25px;
+}
+.about-us-text{
+ font-family: 'Lora', serif;
+ font-size: 18px;
+ line-height: 1.7;
+ color: #bfbab4;
+}
+
+.about-us-underheading{
+ font-family: 'Work Sans', sans-serif;
+ font-weight: 700;
+ font-size: 22px;
+ color: #bfbab4;
+}
+
+.span-adress{
+  font-weight: 500;
+  color: #ffff;
+  font-style: italic;
+}
+
+.content-container{
+padding:2%;
+font-weight: 300;
+line-height:24px;
+background-color:#100c08;
+}
+.content-container p{
+margin-bottom:15px;
+text-align: justify;
+}
+.content-container .image{
+width:450px;
+position:static;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.content-container .image img{
+width:90%;
+height:auto;
+/*transform:scale(1) rotate3d(5deg);
+transition: transform .5s; */
+}
+
+/* to keep or not to keep? it messes with navbar
+
+.content-container .image:hover img{
+ -ms-transform: scale(1.3); 
+-webkit-transform: scale(1.3); 
+ transform: scale(1.3) rotate(-10deg); 
+} */
+
+.content-container .image.right{
+float:right;
+margin-left:20px;
+}
+
+.content-container .image.left{
+margin-top: 150px;
+float:left;
+margin-right:20px;
+}
+
+.text{
+    margin-top: 150px;
+}
