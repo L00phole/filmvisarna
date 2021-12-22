@@ -155,6 +155,10 @@
     background-color: rgb(37, 201, 86);
 }
 
+.seatSelected:hover{
+    cursor: pointer;
+}
+
 #total-price-container{
     display: inline-block;
     font-size: 20px;

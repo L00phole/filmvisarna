@@ -37,7 +37,7 @@ async function selectedShow(showId) {
     // Creates components to display info about the selected show
     movieTitle.innerHTML = showInfo.film;
 
-    renderMovieImage(showId);
+    renderMovieImageAndInfo(showId);
 
     let auditorium = document.createElement('p')
     auditorium.innerHTML = showInfo.auditorium;
@@ -81,6 +81,9 @@ async function renderAuditorium(seats) {
             if (seat == 'x') {
                 seatDiv.setAttribute('class', 'seatOccupied');
             }
+            else if (seatsToBook.includes(seat)) {
+                seatDiv.setAttribute('class', 'seatSelected');
+            }
             else {
                 seatDiv.setAttribute('id', seat);
             }
@@ -109,6 +112,15 @@ async function renderAuditorium(seats) {
         }
         updateSeatsToSelect();
     });
+
+    $('.seatSelected').click(function () {
+        this.setAttribute('class', 'seat');
+        selectedSeatsCount -= 1;
+        seatsToSelect += 1;
+        seatsToBook.splice(seatsToBook.indexOf(this.id));
+
+        updateSeatsToSelect();
+    })
 }
 
 // Returns data from the show with the given id
@@ -122,10 +134,14 @@ const getMovieData = (showId) => {
     return data['films'].find(film => film.title == showInfo.film);
 }
 
-const renderMovieImage = (showId) => {
+const renderMovieImageAndInfo = (showId) => {
     let movieData = getMovieData(showId);
     document.getElementById('movieImageContainer').innerHTML = `
         <img src="${movieData.images}"></img>
+        <div>
+            <p>${movieData.shortDescription}</p>
+            <p>Längd: ${movieData.length} minuter</p>
+        </div>
     `
 }
 
@@ -267,7 +283,7 @@ const resetTickets = () => {
         seniorTickets = 0;
     }
     else {
-        childTickets = parseInt(window.localStorage.getItem('seniorTickets'));
+        seniorTickets = parseInt(window.localStorage.getItem('seniorTickets'));
         document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
     }
     if (localStorage.getItem('childTickets') === null) {
@@ -300,7 +316,8 @@ const resetTickets = () => {
         seatsToBook = [];
     }
     else {
-        seatsToBook = localStorage.getItem('seatsToBook').split(',');
+        seatsToBook = localStorage.getItem('seatsToBook').split(',').map(x => parseInt(x));
+        console.log(seatsToBook);
     }
 
     console.log(ordTickets);
@@ -323,4 +340,11 @@ const setLocalStorage = () => {
     window.localStorage.setItem('childTickets', parseInt(childTickets));
     window.localStorage.setItem('seatsToSelect', parseInt(seatsToSelect));
     window.localStorage.setItem('selectedSeatsCount', parseInt(selectedSeatsCount));
+
+    /*console.log("");
+    console.log(parseInt(ordTickets));
+    console.log(parseInt(seniorTickets));
+    console.log(parseInt(childTickets));
+    console.log(parseInt(seatsToSelect));
+    console.log(parseInt(selectedSeatsCount));*/
 }
