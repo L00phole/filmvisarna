@@ -8,9 +8,10 @@
       "time": "18:00"
     },
     "seatsToBook": [
-      "53",
-      "54"
+      53,
+      "55",
+      "56"
     ],
-    "totalPrice": 200
+    "totalPrice": 320
   }
 }

@@ -45,7 +45,7 @@ function renderMovieRefs(films) {
         html += `
             <p>
                 <h3>
-                    <img id="Dune" src="${film.images}" alt="" width="200px" height="auto">
+                    <img id="Dune" src="${film.images}" alt="${film.title}" width="200px" height="auto">
                     <br><b>${film.title}<b/>
                 </h3>
                 ${film.shortDescription}<br>
