@@ -37,7 +37,7 @@ async function selectedShow(showId) {
     // Creates components to display info about the selected show
     movieTitle.innerHTML = showInfo.film;
 
-    renderMovieImage(showId);
+    renderMovieImageAndInfo(showId);
 
     let auditorium = document.createElement('p')
     auditorium.innerHTML = showInfo.auditorium;
@@ -81,6 +81,9 @@ async function renderAuditorium(seats) {
             if (seat == 'x') {
                 seatDiv.setAttribute('class', 'seatOccupied');
             }
+            else if (seatsToBook.includes(seat)) {
+                seatDiv.setAttribute('class', 'seatSelected');
+            }
             else {
                 seatDiv.setAttribute('id', seat);
             }
@@ -109,6 +112,25 @@ async function renderAuditorium(seats) {
         }
         updateSeatsToSelect();
     });
+
+    $('.seatSelected').click(function () {
+        if ($(this).attr('class') == 'seatSelected') {
+            this.setAttribute('class', 'seat')
+            selectedSeatsCount -= 1;
+            seatsToSelect += 1;
+            seatsToBook.splice(seatsToBook.indexOf(this.id));
+        }
+        else {
+            if (seatsToSelect < 1) {
+                return;
+            }
+            this.setAttribute('class', 'seatSelected')
+            selectedSeatsCount += 1;
+            seatsToSelect -= 1;
+            seatsToBook.push(this.id);
+        }
+        updateSeatsToSelect();
+    });
 }
 
 // Returns data from the show with the given id
@@ -117,15 +139,21 @@ function getSelectedShowData(showId) {
     return showInfo;
 }
 
+// Returns data of the film of the show with the given show id
 const getMovieData = (showId) => {
     showInfo = data['shows'].find(show => show.id == showId);
     return data['films'].find(film => film.title == showInfo.film);
 }
 
-const renderMovieImage = (showId) => {
+// Sets the innerHTML attribute of a container to display a movie poster and info
+const renderMovieImageAndInfo = (showId) => {
     let movieData = getMovieData(showId);
     document.getElementById('movieImageContainer').innerHTML = `
         <img src="${movieData.images}"></img>
+        <div>
+            <p>${movieData.shortDescription}</p>
+            <p>Längd: ${movieData.length} minuter</p>
+        </div>
     `
 }
 
@@ -254,73 +282,53 @@ async function calcPrices() {
     return totalPrice
 }
 
-// Function that resets the values for ticket and seat counter variables
-const resetTickets = () => {
-    if (localStorage.getItem('ordTickets') === null) {
+// Retrieves data from local storage, sets variable values to 0/empty array if local storage
+// object is null
+const resetTickets = (showId) => {
+    let cachedData = JSON.parse(localStorage.getItem(`cachedData-${showId}`));
+    console.log(cachedData);
+
+    if (cachedData === null) {
         ordTickets = 0;
-    }
-    else {
-        ordTickets = parseInt(window.localStorage.getItem('ordTickets'));
         document.getElementById('ordCategoryCount').innerHTML = ordTickets;
-    }
-    if (localStorage.getItem('seniorTickets') === null) {
         seniorTickets = 0;
-    }
-    else {
-        childTickets = parseInt(window.localStorage.getItem('seniorTickets'));
         document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
-    }
-    if (localStorage.getItem('childTickets') === null) {
         childTickets = 0;
-    }
-    else {
-        childTickets = parseInt(window.localStorage.getItem('childTickets'));
         document.getElementById('childCategoryCount').innerHTML = childTickets;
-    }
-    if (localStorage.getItem('availableSeatsCount') === null) {
         availableSeatsCount = 0;
-    }
-    else {
-        availableSeatsCount = parseInt(window.localStorage.getItem('availableSeatsCount'));
-        document.getElementById('availableSeatsCount').innerHTML = `Antal lediga platser: ${availableSeatsCount}`;
-    }
-    if (localStorage.getItem('seatsToSelect') === null) {
         seatsToSelect = 0;
-    }
-    else {
-        seatsToSelect = parseInt(localStorage.getItem('seatsToSelect'));
-    }
-    if (localStorage.getItem('selectedSeatsCount') === null) {
         selectedSeatsCount = 0;
-    }
-    else {
-        selectedSeatsCount = parseInt(localStorage.getItem('selectedSeatsCount'));
-    }
-    if (localStorage.getItem('seatsToBook') === null) {
         seatsToBook = [];
     }
     else {
-        seatsToBook = localStorage.getItem('seatsToBook').split(',');
+        ordTickets = parseInt(cachedData['ordTickets']);
+        document.getElementById('ordCategoryCount').innerHTML = ordTickets;
+        seniorTickets = parseInt(cachedData['seniorTickets']);
+        document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
+        childTickets = parseInt(cachedData['childTickets']);
+        document.getElementById('childCategoryCount').innerHTML = childTickets;
+        availableSeatsCount = parseInt(cachedData['availableSeatsCount']);
+        seatsToSelect = parseInt(cachedData['seatsToSelect']);
+        selectedSeatsCount = parseInt(cachedData['selectedSeatsCount']);
+        seatsToBook = cachedData['seatsToBook'].map(x => parseInt(x));
     }
 
-    console.log(ordTickets);
-    console.log(seniorTickets);
-    console.log(childTickets);
-    console.log(availableSeatsCount);
-    console.log(seatsToSelect);
-    console.log(selectedSeatsCount);
-    console.log(seatsToBook);
-
     updateSeatsToSelect();
-
-    window.localStorage.clear();
 }
 
+// Save an object with data from the current session in local storage
 const setLocalStorage = () => {
-    window.localStorage.setItem('seatsToBook', seatsToBook);
-    window.localStorage.setItem('ordTickets', parseInt(ordTickets));
-    window.localStorage.setItem('seniorTickets', parseInt(seniorTickets));
-    window.localStorage.setItem('childTickets', parseInt(childTickets));
-    window.localStorage.setItem('seatsToSelect', parseInt(seatsToSelect));
-    window.localStorage.setItem('selectedSeatsCount', parseInt(selectedSeatsCount));
+    let showId = window.location.href.split('-')[1];
+    let cacheData = {
+        'showId': showId,
+        'seatsToBook': seatsToBook,
+        'ordTickets': ordTickets,
+        'seniorTickets': seniorTickets,
+        'childTickets': childTickets,
+        'availableSeatsCount': availableSeatsCount,
+        'seatsToSelect': seatsToSelect,
+        'selectedSeatsCount': selectedSeatsCount
+    };
+
+    window.localStorage.setItem(`cachedData-${showId}`, JSON.stringify(cacheData));
 }
