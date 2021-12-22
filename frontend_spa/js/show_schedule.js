@@ -88,6 +88,7 @@ async function createShowSchedule(weeks) {
     populateShowSchedule();
 }
 
+// Adds elements containing data about shows for a given date
 const showSelectedDateSchedule = (value) => {
     // Finds the shows with selected date
     let shows = data['shows'].filter(show => show.date == value);
@@ -109,8 +110,8 @@ const showSelectedDateSchedule = (value) => {
         `;
         showDiv.style.border = "solid 1px";
         showDiv.style.borderRadius = "5px";
-        showDiv.style.padding = "5px";
-        showDiv.style.marginTop = "8px";
+        showDiv.style.padding = "15px";
+        showDiv.style.minWidth = "200px";
         showInfo.appendChild(showDiv);
 
         // Add an on click event to the recently created div,

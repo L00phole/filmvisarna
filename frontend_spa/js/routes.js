@@ -36,6 +36,7 @@ let routes = {
         document.querySelector('main').innerHTML = partial;
         selectedShow(showId);
         initButtons();
+        resetTickets();
     }
 
 }

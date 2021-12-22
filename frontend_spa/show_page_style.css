@@ -1,0 +1,179 @@
+#showMain{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 auto;
+}
+
+#showInfoDiv{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;    
+}
+
+#movieTitle{
+    margin: 25px;
+}
+
+#movieImageContainer{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#customerCategorySelection{
+    margin-top: 70px;
+    user-select: none;
+}
+
+#customerCategoryH{
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.customerCategoryDiv{
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: 300px;
+}
+
+.innerDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.customerCategoryP{
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.customerCategorySpanTop{
+    float: right;
+}
+
+.customerCategorySub{
+    display: inline-block;
+    margin-right: 15px;
+    border: solid 1px;
+    border-radius: 6px;
+    width: 25px;
+    text-align: center;
+    background-color:#433424;
+}
+
+.customerCategorySub:hover{
+    cursor: pointer;
+    background-color: #949494;
+}
+
+.customerCategoryAdd{
+    display: inline-block;
+    margin-left: 15px;
+    border: solid 1px;
+    border-radius: 6px;
+    width: 25px;
+    text-align: center;
+    background-color: #433424;
+}
+
+.customerCategoryAdd:hover{
+    cursor: pointer;
+    background-color: #949494;
+}
+
+#auditoriumContainer{
+    margin-top: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+#seatTypes{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#seatTypes p{
+    margin: 5px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+#seatsToSelect{
+    font-size: 20px;
+    margin: 20px;
+}
+
+#screen{
+    background-color: #fff;
+    height: 100px;
+    width: 260px;
+    margin: auto;
+    margin-bottom: 15px;
+    transform: rotateX(-45deg);
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.75);
+}
+
+.row{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.seat{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: #949494;
+}
+
+.seat:hover{
+    cursor: pointer;
+}
+
+.seatOccupied{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: darkred;
+}
+
+.seatSelected{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(37, 201, 86);
+}
+
+#total-price-container{
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 7px;
+}
+
+/* Styling for conformation button*/
+#confirm-btn #btn{
+    margin-top: 10px;
+    margin-bottom: 35px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#fff;
+    background-color: rgba(211, 211, 211, 0.281);
+}
+
+#confirm-btn #btn:hover{
+    background-color:  #9c9c97;
+    cursor: pointer;
+}

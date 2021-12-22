@@ -23,18 +23,22 @@ let seniorTotalPrice = 0;
 let childTotalPrice = 0;
 let totalPrice = 0;
 
+// Function that resets the values for ticket and seat counter variables
+const resetTickets = () => {
+    ordTickets = 0;
+    seniorTickets = 0;
+    childTickets = 0;
+    availableSeatsCount = 0;
+    seatsToSelect = 0;
+    selectedSeatsCount = 0;
+    seatsToBook = [];
+}
+
 // Adds components to show data for the show with the given id
 async function selectedShow(showId) {
-
-    // On hard pagereload showId is missing - then goto start page
-    if (!showId) {
-        //  location.replace('/');
-    }
-
-
     // Calls function to get data of the selected show
     let showInfo = await getSelectedShowData(showId);
-    let showInfoDiv = document.getElementById('showInfo');
+    let showInfoDiv = document.getElementById('showInfoDiv');
 
     // Reads JSON file with auditorium data, gets the total number of
     // seats for the auditorium of the selected show. 
@@ -119,8 +123,7 @@ async function renderAuditorium(seats) {
 }
 
 // Returns data from the show with the given id
-async function getSelectedShowData(showId) {
-    console.log(Object.keys(data))
+function getSelectedShowData(showId) {
     showInfo = data['shows'].find(show => show.id == showId);
     return showInfo;
 }
@@ -256,7 +259,7 @@ async function calcPrices() {
     totalPrice = ordTotalPrice + childTotalPrice + seniorTotalPrice;
 
     let totalPriceContainer = document.getElementById('total-price-container');
-    totalPriceContainer.innerHTML = totalPrice;
+    totalPriceContainer.innerHTML = `Pris: ${totalPrice}:-`;
 
     return totalPrice
 }

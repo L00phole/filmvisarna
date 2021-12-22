@@ -95,8 +95,7 @@ header ::after{
    
 }
 
-#showSchedule{
-    float: right;
+#showSchedule {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +103,6 @@ header ::after{
     background-color: black;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: aliceblue;
-    width: 12%;
 }
 
 #dateSelect{
@@ -122,7 +120,12 @@ header ::after{
 }
 
 #showInfo{
-    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 10px;
 }
 
 #movies{
@@ -159,13 +162,25 @@ header ::after{
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    #showInfo {  
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1267px) {
+    #showInfo {  
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
 #Finch{
     width: 296.5px;
     height: auto;
 }
 
 .about-movie-poster{
-    position: static; /* ändrad från absolute till static */
+    position: static;
     margin: 50px;
     top: 700px;
     left: 200px;
@@ -291,21 +306,17 @@ margin-right:20px;
 
  /*
  *  Style for show page components
+ * 
+ *  Moved to show_page_syle.css
  */
 
-#showMain{
+/*#showMain{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0 auto;
 }
 
 #movieImageContainer{
     text-align: center;
-}
-
-#showInfo{
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
 }
 
 #total-price-container{
@@ -447,7 +458,7 @@ margin-right:20px;
     margin: 5px;
     margin-bottom: 10px;
     background-color: rgb(37, 201, 86);
-}
+}*/
 
 div#bottom {
 border-top: 1px solid aliceblue;
@@ -513,9 +524,12 @@ width: 400px;
 flex: 0.85;
 }
 
-/* Styling for conformation button*/
+/* Styling for conformation button
+*
+*  Moved to show_page_style.css
+*/
 
-#confirm-btn #btn{
+/*#confirm-btn #btn{
     width: 120px;
     height: 40px;
     border-radius: 5px;
@@ -525,4 +539,4 @@ flex: 0.85;
 }
 #confirm-btn #btn:hover{
     background-color:  #9c9c97;
-}
+}*/
