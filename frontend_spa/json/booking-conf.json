@@ -1,15 +1,15 @@
 {
   "infos": {
     "showInfo": {
-      "id": 3,
-      "auditorium": "Lilla Salongen",
-      "film": "Dune",
+      "id": 2,
+      "auditorium": "Stora Salongen",
+      "film": "Eternals",
       "date": "2021-12-22",
-      "time": "20:30"
+      "time": "18:00"
     },
     "seatsToBook": [
-      "32",
-      "33"
+      "53",
+      "54"
     ],
     "totalPrice": 200
   }
