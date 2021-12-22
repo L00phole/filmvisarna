@@ -99,14 +99,12 @@ async function renderAuditorium(seats) {
             if (seatsToSelect < 1) {
                 return;
             }
-            console.log('add seatSelected');
             $(this).addClass('seatSelected');
             selectedSeatsCount += 1;
             seatsToSelect -= 1;
             seatsToBook.push(this.id);
         }
         else {
-            console.log('remove seatSelected');
             $(this).removeClass('seatSelected');
             selectedSeatsCount -= 1;
             seatsToSelect += 1;
@@ -283,8 +281,33 @@ async function calcPrices() {
 }
 
 // Function that resets the values for ticket and seat counter variables
-const resetTickets = () => {
-    if (localStorage.getItem('ordTickets') === null) {
+const resetTickets = (showId) => {
+    let cachedData = JSON.parse(localStorage.getItem(`cachedData-${showId}`));
+    console.log(cachedData);
+
+    if (cachedData === null) {
+        ordTickets = 0;
+        seniorTickets = 0;
+        childTickets = 0;
+        availableSeatsCount = 0;
+        seatsToSelect = 0;
+        selectedSeatsCount = 0;
+        seatsToBook = [];
+    }
+    else {
+        ordTickets = parseInt(cachedData['ordTickets']);
+        document.getElementById('ordCategoryCount').innerHTML = ordTickets;
+        seniorTickets = parseInt(cachedData['seniorTickets']);
+        document.getElementById('seniorCategoryCount').innerHTML = seniorTickets;
+        childTickets = parseInt(cachedData['childTickets']);
+        document.getElementById('childCategoryCount').innerHTML = childTickets;
+        availableSeatsCount = parseInt(cachedData['availableSeatsCount']);
+        seatsToSelect = parseInt(cachedData['seatsToSelect']);
+        selectedSeatsCount = parseInt(cachedData['selectedSeatsCount']);
+        seatsToBook = cachedData['seatsToBook'].map(x => parseInt(x));//.split(',').map(x => parseInt(x));
+    }
+
+    /*if (localStorage.getItem('ordTickets') === null) {
         ordTickets = 0;
     }
     else {
@@ -329,29 +352,42 @@ const resetTickets = () => {
     }
     else {
         seatsToBook = localStorage.getItem('seatsToBook').split(',').map(x => parseInt(x));
-        console.log(seatsToBook);
-    }
+    }*/
 
-    console.log(ordTickets);
+    /*console.log(ordTickets);
     console.log(seniorTickets);
     console.log(childTickets);
     console.log(availableSeatsCount);
     console.log(seatsToSelect);
     console.log(selectedSeatsCount);
-    console.log(seatsToBook);
+    console.log(seatsToBook);*/
 
     updateSeatsToSelect();
 
-    window.localStorage.clear();
+    //window.localStorage.clear();
 }
 
 const setLocalStorage = () => {
-    window.localStorage.setItem('seatsToBook', seatsToBook);
+    let showId = window.location.href.split('-')[1];
+    let cacheData = {
+        'showId': showId,
+        'seatsToBook': seatsToBook,
+        'ordTickets': ordTickets,
+        'seniorTickets': seniorTickets,
+        'childTickets': childTickets,
+        'availableSeatsCount': availableSeatsCount,
+        'seatsToSelect': seatsToSelect,
+        'selectedSeatsCount': selectedSeatsCount
+    };
+
+    window.localStorage.setItem(`cachedData-${showId}`, JSON.stringify(cacheData));
+
+    /*window.localStorage.setItem('seatsToBook', seatsToBook);
     window.localStorage.setItem('ordTickets', parseInt(ordTickets));
     window.localStorage.setItem('seniorTickets', parseInt(seniorTickets));
     window.localStorage.setItem('childTickets', parseInt(childTickets));
     window.localStorage.setItem('seatsToSelect', parseInt(seatsToSelect));
-    window.localStorage.setItem('selectedSeatsCount', parseInt(selectedSeatsCount));
+    window.localStorage.setItem('selectedSeatsCount', parseInt(selectedSeatsCount));*/
 
     /*console.log("");
     console.log(parseInt(ordTickets));
