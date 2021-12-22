@@ -99,12 +99,14 @@ async function renderAuditorium(seats) {
             if (seatsToSelect < 1) {
                 return;
             }
+            console.log('add seatSelected');
             $(this).addClass('seatSelected');
             selectedSeatsCount += 1;
             seatsToSelect -= 1;
             seatsToBook.push(this.id);
         }
         else {
+            console.log('remove seatSelected');
             $(this).removeClass('seatSelected');
             selectedSeatsCount -= 1;
             seatsToSelect += 1;
@@ -114,13 +116,23 @@ async function renderAuditorium(seats) {
     });
 
     $('.seatSelected').click(function () {
-        this.setAttribute('class', 'seat');
-        selectedSeatsCount -= 1;
-        seatsToSelect += 1;
-        seatsToBook.splice(seatsToBook.indexOf(this.id));
-
+        if ($(this).attr('class') == 'seatSelected') {
+            this.setAttribute('class', 'seat')
+            selectedSeatsCount -= 1;
+            seatsToSelect += 1;
+            seatsToBook.splice(seatsToBook.indexOf(this.id));
+        }
+        else {
+            if (seatsToSelect < 1) {
+                return;
+            }
+            this.setAttribute('class', 'seatSelected')
+            selectedSeatsCount += 1;
+            seatsToSelect -= 1;
+            seatsToBook.push(this.id);
+        }
         updateSeatsToSelect();
-    })
+    });
 }
 
 // Returns data from the show with the given id
