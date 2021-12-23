@@ -43,6 +43,11 @@ let routes = {
     async contactUs() {
         let partial = await (await fetch('/partials/contact.html')).text();
         document.querySelector('main').innerHTML = partial;
+    },
+    // bookings page route
+    async bookings() {
+        let partial = await (await fetch('/partials/bookings.html')).text();
+        document.querySelector('main').innerHTML = partial;
     }
 
 }

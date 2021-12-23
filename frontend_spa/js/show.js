@@ -254,21 +254,27 @@ function initButtons() {
     });
 
     $("#btn").click(function () {
-        const infos = { showInfo, seatsToBook, totalPrice }
 
-        book(showInfo.id, seatsToBook);
-        JSON._save('booking-conf.json', { infos });
-        alert(
-            `Bokningsbekräftelse
+        if (seatsToSelect == 0) {
+            const infos = { showInfo, seatsToBook, totalPrice }
+
+            book(showInfo.id, seatsToBook);
+            JSON._save('booking-conf.json', { infos });
+            alert(
+                `Bokningsbekräftelse
             Film: ${showInfo.film}
             Datum: ${showInfo.date}
             Tid: ${showInfo.time}
-            Platse: ${seatsToBook}
-            Betalt: ${totalPrice}
+            Platser: ${seatsToBook}
+            Betalt: ${totalPrice} kr
             `
-        );
-        resetCache();
-        router();
+            );
+            resetCache();
+            router();
+        }
+        else if (seatsToBook.length !== 0) {
+            alert("Du har ovalda säten");
+        }
     });
 }
 
