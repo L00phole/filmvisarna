@@ -1,0 +1,27 @@
+/* all styling for the start page lies here */
+/*#showSchedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #100c08;
+    font-family: 'Lora', serif;
+    color: #bfbab4;
+    
+}
+#showInfo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    gap: 10px;
+}
+
+#dateSelect{
+    font-size: 14px;
+    padding: 2px;
+    margin-bottom: 2px;
+    background-color: #100c08;
+    color: #bfbab4;
+}*/

@@ -1,8 +1,18 @@
+ /* all styling for nav footer lies here
+ 
+ #d2ceca;
+#3c2f20;
+#282421;
+#bfbab4;
+#edebea;
+#bfbfbe;
+ */
+ 
  header{
-    border-bottom:solid 1px aliceblue;
+    border-bottom:solid 1px #bfbab4;
    
-   background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000,
-    #181718, #292828, #3b393a, #666366, #939297, #c1c3ca, #f0f8ff);
+   background-image: linear-gradient(to right, #000000, #000000, #000000, #080707, #100e0d,
+    #181614, #24201e, #282421, #3e3a37, #3e3a37, #3e3a37, #3e3a37);
 }
 
 .nav-container{
@@ -12,7 +22,7 @@
     z-index: 1;
 }
 .nav-list {
-float:left;
+display: flex;
 margin: 0;
 padding: 0;
 
@@ -33,10 +43,10 @@ nav li{
     
 }
 .nav-list a{
-    color: rgb(199, 199,199);
+    color: #bfbab4;
     text-decoration: none;
     text-transform: capitalize;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lora', serif;
     font-size: 16px;
     font-weight: bold;
 }
@@ -64,7 +74,8 @@ header ::after{
 
 
 div#bottom {
-border-top: 1px solid aliceblue;
+background-color: #0a0705;
+border-top: 1px solid #bfbab4;
 }
  div#bottom a{
 color: #ffff;

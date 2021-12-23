@@ -37,8 +37,7 @@ main{
     box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
     position: static;
     overflow: hidden;
-    float: left;
-    text-align: center;
+    
 }
 .movie img{
     width: 100%;
@@ -85,24 +84,29 @@ main{
     opacity: 1;  
 }
 
-/* .dropdown {
-position: relative;
-margin-top: 50px;
-margin-right: 30px;
-margin-left: 150px;
-} */
+.movie-trailer{
+    height: 600px;
+    width: 100%;
+    position: relative;
+    top: 30px;
+}
 
+.dropdown {
+position: relative;
+margin-top: 30px;
+margin-right: 300px;
+}
 .dropdown__content {
 display: none;
 left: 0;
 padding-top: 4px;
 position: absolute;
 top: 100%;
-background-color:#100c08;
+background-color:#0e0b07;
 color: #bfbab4;
-z-index: 9999;
-height: 500px;
-width: 400px;
+/* z-index: 9999; */ /* removed z-index so that it falls under the nav */
+height: 400px;
+width: 300px;
 overflow: auto;
 }
 
@@ -110,6 +114,27 @@ overflow: auto;
 display: block;
 }
 
+.filmScheduleDiv{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.filmScheduleSpan{
+    align-items: center;
+    margin: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: aliceblue;
+    text-align: center;
+}
+
+.showDataDiv{
+    font-family: 'Lora', serif;
+}
 
 
 .container__media {
@@ -125,12 +150,19 @@ width: 400px;
 flex: 0.85;
 }
 
+#testContainer{
+    background-color: #0e0b07;
+    text-decoration: none;
+}
+u{
+ text-decoration: none;
+}
+
 .container__block {
    font-size: 18px;
    align-items: start;
    display: flex;
    margin-left: 16px;
-   
 }
 
 .about-movie-poster{
@@ -144,19 +176,29 @@ flex: 0.85;
   display: flex;
   margin: auto;
   width: 100%;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
 
 .showschedule-button{
-   font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    color:#fff;
+    background-color: rgba(211, 211, 211, 0.281);
+   /* font-size: 18px;
    font-family: 'Lora', serif;
    font-weight: 900;
-   border-width: 2px;
+   border-width: 2px; */
 }
 
 .showschedule-button:hover{
     cursor: pointer;
+    background-color:  #9c9c97;
 }
+
 
