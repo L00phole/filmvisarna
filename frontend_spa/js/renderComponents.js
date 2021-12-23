@@ -10,7 +10,7 @@ function getNavbarHtml() {
                     <li><a href="/">Start</a></li>
                     <li><a href="/movies">Filmer</a></li>
                     <li><a href="/aboutUs">Om oss</a></li>
-                    <li><a href="/">kontakt</a></li>
+                    <li><a href="/contactUs">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
