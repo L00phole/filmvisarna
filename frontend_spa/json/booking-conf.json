@@ -1,16 +1,21 @@
 {
   "infos": {
     "showInfo": {
-      "id": 2,
+      "id": 6,
       "auditorium": "Stora Salongen",
-      "film": "Eternals",
+      "film": "Matrix Resurrections",
       "date": "2021-12-22",
-      "time": "18:00"
+      "time": "23:00"
     },
     "seatsToBook": [
-      "53",
-      "54"
+      77,
+      75,
+      74,
+      72,
+      29,
+      79,
+      "76"
     ],
-    "totalPrice": 200
+    "totalPrice": 585
   }
 }

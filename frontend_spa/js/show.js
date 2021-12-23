@@ -258,6 +258,15 @@ function initButtons() {
 
         book(showInfo.id, seatsToBook);
         JSON._save('booking-conf.json', { infos });
+        alert(
+            `Bokningsbekräftelse
+            Film: ${showInfo.film}
+            Datum: ${showInfo.date}
+            Tid: ${showInfo.time}
+            Platse: ${seatsToBook}
+            Betalt: ${totalPrice}
+            `
+            );
     });
 }
 
