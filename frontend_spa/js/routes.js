@@ -48,6 +48,12 @@ let routes = {
     async bookings() {
         let partial = await (await fetch('/partials/bookings.html')).text();
         document.querySelector('main').innerHTML = partial;
+    },
+
+    // Ticket route
+    async ticket() {
+        let partial = await (await fetch('/partials/ticket.html')).text();
+        document.querySelector('main').innerHTML = partial;
     }
 
 }

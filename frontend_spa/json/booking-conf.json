@@ -1,18 +1,15 @@
 {
   "infos": {
     "showInfo": {
-      "id": 154,
+      "id": 2,
       "auditorium": "Stora Salongen",
-      "film": "Red Notice",
-      "date": "2022-01-16",
-      "time": "20:30"
+      "film": "Eternals",
+      "date": "2021-12-22",
+      "time": "18:00"
     },
     "seatsToBook": [
-      "33",
-      "34",
-      "44",
-      "43"
+      "76"
     ],
-    "totalPrice": 400
+    "totalPrice": 75
   }
 }
