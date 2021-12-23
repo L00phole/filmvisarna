@@ -24,9 +24,7 @@ function getFooterHtml() {
         <div id="bottom">
             <br>
             Filmvisarna &nbsp;|&nbsp; Vi finns här:
-            <a title="Visa karta i ny flik..." target="_blank" href="https://goo.gl/maps/vvQBHrNetinJYCtLA">Någonstans i
-                småland
-                10</a>
+            <a title="Visa karta i ny flik..." target="_blank" href="https://goo.gl/maps/vvQBHrNetinJYCtLA">Hökhult 5, 340 13 Hamneda</a>
             , 010-10 01 11 &nbsp;|&nbsp;
             <a title="Maila till oss.." href="mailto:info@filmvisarna.nu">info@Filmvisarna.nu</a>
         </div>
