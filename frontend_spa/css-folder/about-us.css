@@ -57,20 +57,21 @@ padding:2%;
 font-weight: 300;
 line-height:24px;
 background-color:#100c08;
+line-height: 1.7;
 }
 .content-container p{
 margin-bottom:15px;
 text-align: justify;
 }
 .content-container .image{
-width:450px;
+width:700px;
 position:static;
 overflow:hidden;
 margin-bottom:10px;
 }
 
 .content-container .image img{
-width:90%;
+width:100%;
 height:auto;
 }
 
@@ -80,7 +81,7 @@ margin-left:20px;
 }
 
 .content-container .image.left{
-margin-top: 150px;
+margin-top: 130px;
 float:left;
 margin-right:20px;
 }

@@ -19,6 +19,7 @@ async function book(showId, seats) {
 
   return booking
 }
+let bookingInfo;
 
 // Find all free seats for a show
 function freeSeats(auditorium, occupiedSeats) {
@@ -34,3 +35,31 @@ function freeSeats(auditorium, occupiedSeats) {
   }
   return seats;
 }
+
+async function startTicketRender() {
+  await readJson();
+  renderTicket();
+}
+
+// read the json file and creates a variable called movie with the data from the json
+async function readJson() {
+  let rawData = await fetch('/json/booking-conf.json')
+  bookingInfo = await rawData.json();
+}
+
+function renderTicket() {
+  console.log('Running render!');
+  console.log(bookingInfo.title);
+  document.querySelector('.bookingsContainer').innerHTML =
+    bookingInfo.map(function (bookingInfo) {
+      return `
+            <h4> film: ${bookingInfo.film}</h4>
+            <h4> salong: ${bookingInfo.auditorium}</h4>
+            <h4> datum: ${bookingInfo.date}</h4>
+            <h4> time: ${bookingInfo.time}</h4>
+            <h4> booked seats: ${bookingInfo.seatsToBook}</h4>
+            <h4> pris: ${bookingInfo.totalPrice}</h4>
+        `
+    }).join('');
+}
+
