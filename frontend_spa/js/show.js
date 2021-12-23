@@ -266,7 +266,9 @@ function initButtons() {
             Platse: ${seatsToBook}
             Betalt: ${totalPrice}
             `
-            );
+        );
+        resetCache();
+        router();
     });
 }
 
@@ -340,4 +342,10 @@ const setLocalStorage = () => {
     };
 
     window.localStorage.setItem(`cachedData-${showId}`, JSON.stringify(cacheData));
+}
+
+const resetCache = () => {
+    let showId = window.location.href.split('-')[1];
+    window.localStorage.setItem(`cachedData-${showId}`, null);
+    resetTickets(showId);
 }
